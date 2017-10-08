@@ -9,7 +9,6 @@ title:               Underbleu
 tagline:             'bong&#39;s devlog'
 description:        'bong&#39;s TIL(Today I Learned) development blog'
 url:                 http://underbleu.github.io
-github.repo:  https://github.com/underbleu
 baseurl:             ''
 paginate:            8
 plugins: [jekyll-paginate]
