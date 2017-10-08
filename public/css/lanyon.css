@@ -175,13 +175,14 @@ h1, h2, h3, h4, h5, h6 {
 /*css customizing*/
 .bong-profile{
     text-align: center;
-    padding-bottom: 40px;
-    padding-top: 30px;
+    padding-bottom: 2.2em;
+    padding-top: 1em;
 }
 .bong-profile img{
     display: inline-block;
-    width: 50%;
+    width: 90px;
     padding-bottom: 0;
+    margin-bottom: 0.5em;
 }
 .name-bong{
     color: #fff;

@@ -6,16 +6,21 @@ permalink:           pretty
 
 # Setup
 title:               Underbleu
-tagline:             'bong devlog'
-site.description:         'bong devlog'
+tagline:             'bong&#39;s devlog'
+description:        'bong&#39;s TIL(Today I Learned) development blog'
 url:                 http://underbleu.github.io
+github.repo:  https://github.com/underbleu
 baseurl:             ''
 paginate:            8
 plugins: [jekyll-paginate]
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
 
 # About/contact
 author:
-  name:              Bong Kim
+  name:              bong Kim
   url:               https://underbleu.github.io
   email:             underbleu.dev@gmail.com
   github.repo:  https://github.com/underbleu
