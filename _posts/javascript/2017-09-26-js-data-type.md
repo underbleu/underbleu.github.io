@@ -14,10 +14,10 @@ comments: true
 `Object`
 
 ## 1. 기본데이터 타입 (Primitive data type)
-기본데이터 타입은 하나의 값만을 가진다.
-### 1_1. 기본자료형 특징 두가지
+
+### 기본자료형 특징 두가지
 * 변경불가능한 값 (immutable value)  
-: 변경이 불가능하다는 뜻은 메모리 영역에서의 변경이 불가능하다는 뜻   
+변경이 불가능하다는 뜻은 메모리 영역에서의 변경이 불가능하다는 뜻   
 값을 재할당할 때 기존의 값을 메모리에서 지우고 대체하는게 아닌 다른곳에 새로운 값을 저장하고 그 값을 참조하도록 변경하는 것이다.   
 -> 지우고 다시 할당하느니 새로운공간에 값을 넣는게 컴퓨터한테 부하가 덜 가기때문  
 -> 기존값은 메모리 그대로 남아있다. 추후에 이 값을 참조하는 곳이 없으면 사라짐 (가비지컬렉션)  
@@ -34,13 +34,13 @@ comments: true
     console.log(str); //b
     ```
 
-### 1_2. 기본자료형 종류 6가지
+### 기본자료형 종류 6가지
 1. Number
 * 자바스크립트에선 모든 숫자를 64비트 부동소수점 형태로 저장 (C언어 double타입과 유사)
 * NaN, Infinity
 
 2. String
-* '', "" 따옴표로 생성
+* '' "" 따옴표로 생성
 * 문자열은 배열처럼 인덱스를 통해 접근할 수 있다. str[i]
 * 한 번 생성된 문자열은 read only로서 수정은 불가
     ```javascript
@@ -54,7 +54,7 @@ comments: true
 
 2. null 
 * case-sensitive (대소문자를 구분한다) -> null은 Null, NULL과 다름
-* 사용하지 않는 객체, 변수 null로 값이 없다고 명시 해줌 -> 메모리누수를 막는다 (가비지콜렉션)
+* 사용하지 않는 객체와 변수를 null로 값이 없다고 명시 해줌 -> 메모리누수를 막는다 (가비지콜렉션)
 * typeof 연산자로 null값은 가진 변수를 연산해 보면 null이 아닌 object가 나온다.  
 -> 설계상의 문제. typeof가 아니라 일치연산자(===)를 사용해야함
 
@@ -70,10 +70,10 @@ comments: true
 * undefined는 타입이자 값이다
     ```javascript
     var andy;
-    var ria = {name:ria, age:24}
+    var ria = {name:'ria', age:24}
     console.log(andy); //undefined. 값
-    console.log(ria.address) //undefined. 값 
     console.log(typeof andy); //undefined. 타입
+    console.log(ria.address) //undefined. 선언되지 않은 프로퍼티 
     ```
 
 6. Symbol (ES6)
@@ -82,13 +82,10 @@ comments: true
 
 > 아무런 값이 할당 되지 않으면 **_undefined_**, 명시적으로 값이 비어있다 나타낼땐 **_null_**
 
-</br>
-
-## 2. 참조데이터 타입 (Object data type) (= 객체형)
+## 2. 참조데이터 타입 (Object data type)
 자바스크립트에서 기본데이터 타입을 제외한 모든 값은 객체이다. 배열, 함수, 정규표현식 모두 객체이다.  
-기본데이터 타입은 하나의 값만 가지지만, 참조타입인 객체는 'key:value'형태의 프로퍼티를 여러게 가질 수 있다.
+* 기본데이터 타입은 하나의 값만 가지지만, 참조타입인 객체는 여러개의 프로퍼티를 가질 수 있다.
 * 값을 가르킨다가 아닌 값을 참조한다 (C언어에서 pointer)
-* pass-by-reference  
-참조에 의한 호출. 즉 메모리의 주소값으로 값을 가져오는 것
+* pass-by-reference: 참조에 의한 호출. 즉 메모리의 주소값으로 값을 가져오는 것
 
 
