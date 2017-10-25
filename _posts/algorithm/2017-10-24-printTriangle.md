@@ -1,28 +1,27 @@
 ---
 layout: post
-title: level 1. 삼각형출력하기 자바스크립트
+title: level 1. 삼각형출력하기
 category: algorithm
-permalink: /algorithm/:year/:month/:day/:title/
+permalink: /algorithm/:title/
 
 tags: [알고리즘, 자바스크립트]
 comments: true
 ---
-# level 1. 삼각형출력하기 (printTriangle)
-> [문제](https://programmers.co.kr/learn/challenge_codes/103)
-
-## # 문제
+> [출처](https://programmers.co.kr/learn/challenge_codes/103) 
+## **문제** 
 printTriangle 메소드는 양의 정수 num을 매개변수로 입력받습니다.
 다음을 참고해 *(별)로 높이가 num인 삼각형을 문자열로 리턴하는 printTriangle 메소드를 완성하세요
 printTriangle이 return하는 String은 개행문자('\n')로 끝나야 합니다. 
 
 ```javascript
-// 높이가 3일때
+// 높이가 3일때 
 *
 **
 ***
 ```
+</br>
 
-## # 내 코드 (Javascript)
+## **내 코드 (Javascript)**
 ```javascript
 function printTriangle(num) {
   var result = '';
@@ -35,8 +34,9 @@ function printTriangle(num) {
   return result;
 }
 ```
+</br>
 
-## # 다른사람 코드 
+## **다른 풀이**
 ### 1. for문 1번사용 + repeat()메소드
 ```javascript
 function printTriangle2(num) {
@@ -55,8 +55,10 @@ function printTriangle3(num) {
   return (num < 1) ? '' : printTriangle3(num - 1) + '*'.repeat(num) + '\n';
 }
 ```
+<br>
 
-## 배운것
+## **배운것**  
 * str.repeat(*count*)  
-특정문자열을 *count*만큼 반복시켜 리턴해주는 메서드 (IE 지원안됨)
+특정문자열을 *count*만큼 반복시켜 
+리턴해주는 메서드 (IE 지원안됨)
 * 재귀함수
