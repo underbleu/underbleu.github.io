@@ -23,7 +23,8 @@ categories: TIL
 
 ___
 ## 프로그래밍이란? 
-
+프로그래밍은 프로그램을 만드는 언어이다. 
+프로그램은 인간이 필욯
 ### 프로그래밍 언어란?
 * computer와의 대화(명령)에 사용되는 일종의 수단
 * 컴파일러는 컴퓨터와 인간사이의 언어 통역가
@@ -66,6 +67,7 @@ ___
 -> Angular, Vue.js, React 등 다양한 SPA Framework/Library 인기
     - 라이브러리 : 소프트웨어를 개발할 때 컴퓨터 프로그램이 사용하는 미리 작성된 코드.
     - 프레임워크 : 복잡한 문제를 해결하거나 서술하는 데 사용되는 기본 개념 구조.)
+* 
 
 ## Browser Support
 - [브라우저별 ES6 지원 현황](https://kangax.github.io/compat-table/es6/)
@@ -79,7 +81,6 @@ __________
 웹페이지를 서버에 요청(request)하고 응답(respond)받아 브러우저에 표시하는 과정
 ![브라우저 동작원리](/img/browser-operating-principle.jpg "웹페이지를 서버에 요청(request)하고 응답(respond)받아 브러우저에 표시하는 과정")
 
-
 	1. 서버에서 html, css, javascript 파일을 응답받음
 	2. html, css는 파싱(parsing)되어 DOM, CSSOM트리로 변환
 	3. 이때 script태그를 만나면 html 파싱 일시중단 -> javascript 파싱 &실행
@@ -92,14 +93,14 @@ __________
 * html5부터 스크립트 로딩지연으로 생기는 문제를 방지하기 위해 추가된 속성 (IE9 이하 버전 지원 X)
 * 웹페이지 파싱과 외부 스크립트파일 다운로드를 동시에함
 -> async : 스크립트 다운로드 직후 스크립트 파일 실행
--> defer: 웹페이지 파싱 완료 직후 스크립트 파일 실행 (DOM 로드 오류가 적음)
+-> defer: html파싱중이 비동기적으로 script파일을 다운받고, html 파싱 완료 직후 스크립트 파일 실행 (DOM 로드 오류가 적음)
 
 _______________
 # 3 Javascript Syntax Basics
 
 - 구문(Statement): 각각의 명령을 의미 (프로그램은 구문들의 집합이다)
 - 코드블록(Code block): 함께 실행되어져야 하는 구문을 그룹화하는것
-- 표현식 (Expression): 하나의 값을 만드는 문장
+- 표현식 (Expression): 하나의 값으로 평가될 수 있는 문장 
     ```javascript
     'Hello' + ' ' + 'Bong'    // Hello Bong
     8 * 10    // 80
@@ -122,7 +123,17 @@ _______________
     - 주석은 해석기(parser)가 무시하며 실행되지 않음
     -  // : 한줄 주석  /* */ : 여러줄 주석
 
+x bit운영체제
+메모리 주소를 표현하는데 x개의 2진수 digit를 이용한다는 말
+1byte는 8bit
 
+Identifier(식별자) = 변수이름
+
+literal 
+value라는 추상적인 의미를 code상에 표현한 문장
+
+연산자
+값 또는 표현식을 조합하여
 __________
 
 # ESlint 설치
