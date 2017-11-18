@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>반응형 웹카페</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/menu-tab.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="skip-nav"><a href="#" class="a11y">본문 바로가기</a></div>
+    <header class="header">
+      <h1 class="logo"><a href="#">로고</a></h1>
+      <ul class="member">
+        <li><a href="#" class="member-login">로그인</a></li>
+        <li><a href="#" class="member-join">회원가입</a></li>
+        <li><a href="#" class="member-community">커뮤니티</a></li>
+      </ul>
+      <div class="search">
+        <input type="text">
+        <button class="btn-search">검색</button>
+      </div>
+      <nav class="navigation">
+        <h2 class="readable-hidden">메인메뉴</h2>
+        <ul class="main-menu">
+          <li>
+            <span>html에 대해</span>
+            <ul class="sub-menu about-html">
+              <li><a href="#">HTML5 소개</a></li>
+              <li><a href="#">레퍼런스 소개</a></li>
+              <li><a href="#">활용예제</a></li>
+            </ul>
+          </li>
+          <li>
+            <span>CSS에 대해</span>
+            <ul class="sub-menu about-css">
+              <li><a href="#">CSS 소개</a></li>
+              <li><a href="#">CSS2 vs CSS3</a></li>
+              <li><a href="#">CSS 애니메이션</a></li>
+            </ul>
+          </li>
+          <li>
+            <span>웹접근성/웹표준</span>
+            <ul class="sub-menu web-standard">
+              <li><a href="#">웹표준이란?</a></li>
+              <li><a href="#">웹접근성의 개요</a></li>
+              <li><a href="#">HTML5의 현재와 미래</a></li>
+            </ul>
+          </li>
+          <li>
+            <span>묻고 답하기</span>
+            <ul class="sub-menu qna">
+              <li><a href="#">묻고 답하기</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">1대1 질문</a></li>
+            </ul>
+          </li>
+          <li>
+            <span>자료실</span>
+            <ul class="sub-menu archive">
+              <li><a href="#">공개 자료실</a></li>
+              <li><a href="#">이미지 자료실</a></li>
+              <li><a href="#">예제 자료실</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-content">
+      <section class="recommend">
+        <h2 class="recommend-heading">추천서적 <span>Recommend Book</span></h2>
+        <img src="#" alt="반응형웹 핵심가이드북" title="책에 대한 정보는 하단 내용 참조">
+        <p class="book-name">웹표준 핵심가이드북 HTML5 + CSS3</p>
+        <p class="author">저자 김데레사</p>
+        <p class="grade">&starf;&starf;&starf;&starf;&starf;</p>
+        <p class="description">웹표준 핵심 가이드북 HTML5 & CSS3 개정판이 새로운 예제로 출간되었습니다. 많은 성원 부탁드립니다.</p>
+      </section>
+      <article class="news">
+        <h2 class="news-heading">새소식 <span>WebCafe News</span></h2>
+        <video src="#">비디오</video>
+        <p class="description">웹표준 핵심가이드 북 개정판 출판을 기념하여 저자의 강의가 있었습니다. 많은 분들이 강의에 참석을 해주셨으며 웹에 대한 많은 이야기를 나눌 수 있는 소중한 시간이었습니다.
+        </p>
+      </article>
+      <section class="board">
+        <h2 class="board-heading">게시판 <span>WebCafe Board</span></h2>
+        <ul class="board-list">
+          <li>리스트1</li>
+          <li>리스트2</li>
+          <li>리스트3</li>
+          <li>리스트4</li>
+          <li>리스트5</li>
+        </ul>
+        <a href="#" class="notice" title="공지사항">더보기</a>
+      </section>
+      <section class="favorite">
+        <h2 class="favorite-heading">인기 사이트 <span>Favorite Site</span></h2>
+        <ol class="favorite-list">
+          <li>리스트1</li>
+          <li>리스트2</li>
+          <li>리스트3</li>
+          <li>리스트4</li>
+        </ol>
+      </section>
+      <article class="twitter">
+        <h2 class="twitter">웹카페 트위터 <span>Webcafe Twitter</span></h2>
+        <a href="#" title="seulbinim의 트위터로 연결됩니다.">
+                김데레사 &commat;seulbinim
+            </a>
+        <img src="#" class="twitter-profile" alt="트위터 프로필">
+        <p class="description">
+          웹표준 핵심 가이드북 개정판 출시 기념으로 세미나를 준비했습니다. 참석을 원하시는 분들은 트위터로 문의하시기 바랍니다.
+        </p>
+      </article>
+    </main>
+    <article class="slogan">
+      <h2 class="slogan-heading">슬로건</h2>
+      <span> The power of the Web is in its universality, Access by everyone regardless of disability is an essential aspect. </span> Tim Berners - Lee , W3C Director and inventor of the World Wide Web
+    </article>
+    <div class="footer-bg">
+      <footer class="footer">
+        <address>
+              <span class="address">서울시 마포구 상수동 123-12 한주빌딩 5층</span>
+              <span class="tel">전화: 02-234-5678</span>
+              <span class="email">이메일: <a href="#">seulbinim@gmail.com</a></span>
+              <span class="copyright">Copyright since © 2010 by Web Cafe CORPORATION ALL RIGHTS RESERVED.</span>
+          </address>
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>
