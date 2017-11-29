@@ -23,3 +23,24 @@
   font-weight: 700;
   src: local('Noto Sans Bold'), local('NotoSans-Bold'), url('font/eot/NotoSansKR-Bold-Hestia.eot'), url('font/eot/NotoSansKR-Bold-Hestia.eot?#iefix') format('embedded-opentype'), url('font/woff/NotoSansKR-Bold-Hestia.woff') format('woff'), url('font/otf/NotoSansKR-Bold-Hestia.otf') format('opentype');
 }
+
+/* Article Fonts */
+
+@font-face {
+  font-family: 'Oswald-Bold';
+  font-weight: 700;
+  src: url('font/Oswald-Bold.ttf');
+  src: url('font/Oswald-Bold.woff') format('woff'), url('font/Oswald-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'PT_Serif-Web-Italic';
+  font-weight: 400;
+  src: url('font/PT_Serif-Web-Italic.ttf');
+  src: url('font/PT_Serif-Web-Italic.woff') format('woff'), url('font/PT_Serif-Web-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'VarelaRound-Regular';
+  font-weight: 400;
+  src: url('font/VarelaRound-Regular.ttf');
+  src: url('font/VarelaRound-Regular.woff') format('woff'), url('font/VarelaRound-Regular.ttf') format('truetype');
+}
