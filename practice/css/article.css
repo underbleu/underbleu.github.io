@@ -59,6 +59,9 @@ a:hover, a:focus {
   display: block;
   clear: both;
 }
+.text {
+  line-height: 30px;
+}
 
 /* 기본 레이아웃 */
 
@@ -102,7 +105,7 @@ a:hover, a:focus {
 }
 .article-container {
   background-color: #fff;
-  padding: 127px 240px 0 120px;
+  padding: 127px 240px 42px 120px;
   position: relative;
   box-shadow: 0 5px 50px rgba(0, 0, 0, .15);
 }
@@ -115,14 +118,12 @@ a:hover, a:focus {
   font-size: 4.8rem;
   padding-right: 120px;
   margin-top: 40px;
-  background-color: lightcoral;
 }
 .metadata {
   position: absolute;
   top: 127px;
   /* absolute로 띄우니 width 잃음. width 직접 지정해주는 것보다 좋은방법 없을까?  */
   width: 720px;
-  background-color: lightblue;
 }
 .metadata__category {
   font-family: 'Oswald-Bold', sans-serif;
@@ -151,7 +152,17 @@ a:hover, a:focus {
   font-size: 2.4rem;
   color: #868686;
   margin-top: 49px;
-  background-color: lemonchiffon;
+  position: relative;
+}
+.headline__description::before {
+  content: "";
+  display: block;
+  width: 13px;
+  height: 15px;
+  position: absolute;
+  left: -44px;
+  top: 7px;
+  background-image: url("article/icon-tag.png");
 }
 
 /* 섹션 1 */
@@ -159,24 +170,8 @@ a:hover, a:focus {
 .section1 {
   margin-top: 45px;
 }
-
-/* 이미지상자 모듈 */
-
-.media {
-  background-color: aqua;
-}
-.media__caption {
-  font-family: 'PT_Serif-Web-Italic', serif;
-  color: #b8b8b8;
-  font-size: 1.2rem;
-  text-align: center;
-  margin-top: 19px;
-  background-color: pink;
-}
-.media__caption--wide {
-  margin-top: 30px;
-  text-align: left;
-  padding-left: 120px;
+.section1 .text {
+  margin-top: 50px;
 }
 .container--wide {
   /* css transform이 성능이 좋음 */
@@ -187,14 +182,23 @@ a:hover, a:focus {
   left: -120px;*/
   /* 음수마진 배치
   margin-left: -120px; */
-  background-color: yellow;
 }
-.text {
-  margin-top: 50px;
-  background-color: springgreen;
+
+/* 이미지상자 모듈 */
+
+.media__caption {
+  font-family: 'PT_Serif-Web-Italic', serif;
+  color: #b8b8b8;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 19px;
+}
+.media__caption--wide {
+  margin-top: 30px;
+  text-align: left;
+  padding-left: 120px;
 }
 .carousel {
-  background-color: lawngreen;
   margin-top: 57px;
   /* overflow: hidden;
   overflow는 트릭 자식콘텐츠가 많으면 잘릴수 있다
@@ -213,14 +217,17 @@ a:hover, a:focus {
   font-size: 1.4rem;
   width: 60px;
   height: 60px;
-  /* padding-top: 60px; */
-  /* overflow: hidden; */
-  background-color: white;
-  border: 1px solid #ececec;
+  padding-top: 60px;
+  overflow: hidden;
   cursor: pointer;
+  background-image: url("article/icon-btn.png");
   vertical-align: middle;
-  position: relative;
 }
+.btn__next {
+  background-position: 100% 0;
+}
+
+/* 폰트로 넣는방법 코드 길어져, bg-image로 넣는게 나을듯
 .btn::after {
   display: inline-block;
   content: "\e804";
@@ -228,7 +235,7 @@ a:hover, a:focus {
   font-size: 1.4rem;
   line-height: 60px;
   color: #868686;
-  /* position: absolute; */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -236,31 +243,19 @@ a:hover, a:focus {
 }
 .btn__prev::after {
   transform: rotate(-180deg);
-}
+} */
+
 .panel-count {
   display: inline-block;
   font-size: 1.4rem;
-  color: #868686;
-  /* line-height: 60px; */
-  background-color: aqua;
-  vertical-align: middle;
+  line-height: 18px;
   margin-left: 30px;
-  width: 29px;
-  height: 13px;
+  color: #868686;
+  vertical-align: middle;
 }
 .panel-count sup {
   font-size: .8rem;
 }
-
-/* .panel-count span:nth-child(n+2) {
-  font-size: .8rem;
-  vertical-align: top;
-  background-color: white;
-} */
-
-
-/* span 3개자체에 클래스줘서 우선순위 낮춰주기 */
-
 
 /* 섹션 2 */
 
@@ -275,15 +270,17 @@ a:hover, a:focus {
   margin-bottom: 48px;
 }
 .quotation {
-  margin-top: 49px;
-  margin-bottom: 49px;
-  position: relative;
+  margin: 50px 0;
 }
 .quotation__text {
-  width: 360px;
+  float: left;
+  width: 357px;
   font-family: 'PT_Serif-Web-Italic', serif;
   color: #222;
   font-size: 1.8rem;
+  line-height: 30px;
+  margin-right: 45px;
+  position: relative;
 }
 .quotation__text::before {
   content: "";
@@ -291,25 +288,24 @@ a:hover, a:focus {
   background: url("article/icon-quotation.png") no-repeat;
   width: 13px;
   height: 11px;
-  position: relative;
-  top: 15px;
-  left: -40px;
+  position: absolute;
+  top: 3px;
+  left: -42px;
 }
 .quotation__author {
-  position: absolute;
-  top: 20px;
-  left: 430px;
+  float: left;
+  /* 인라인 제거 */
+  font-size: 0;
 }
 .quotation__author__photo {
   width: 70px;
   height: 70px;
-  background-color: yellow;
   border-radius: 50%;
-  background: url("article/author-profile.png");
 }
 .quotation__author__name {
   font-family: 'VarelaRound-Regular', sans-serif;
   font-size: 1.4rem;
+  line-height: 1;
   color: #222;
   margin-top: 19px;
 }
@@ -318,6 +314,7 @@ a:hover, a:focus {
   font-family: 'PT_Serif-Web-Italic', serif;
   color: #b8b8b8;
   font-size: 1.2rem;
+  line-height: 1;
 }
 
 /* 섹션3 */
@@ -329,50 +326,60 @@ a:hover, a:focus {
   font-family: 'VarelaRound-Regular', sans-serif;
   font-size: 1.8rem;
   color: #222;
+  margin-bottom: 25px;
 }
-.column2 {
-  display: inline-block;
-  width: 40%;
-  vertical-align: middle;
+.col-2 {
+  margin-top: 47px;
+  width: 50%;
+  float: left;
+  padding-right: 35px;
 }
+
+/* SNS */
+
 .social {
-  clear: both;
-  padding-top: 55px;
+  margin-top: 56px;
 }
 .social__share {
-  background-color: #215b9a;
   width: 85px;
   height: 30px;
+  border-radius: 30px;
   margin-right: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
   color: #fff;
   font-size: 1rem;
-  padding: 10px 20px;
+  line-height: 1;
   text-align: right;
   font-family: 'Oswald-Bold';
-  border-radius: 30px;
+  background-color: #215b9a;
+  background-image: url("article/icon-facebook.png");
+  background-repeat: no-repeat;
+  background-position: 12px 7px;
 }
-
-/* 페이지버튼 */
-
-.carousel__button {
-  width: 60px;
-  height: 60px;
-  background-color: white;
-  border: 1px solid #aaa;
-  padding-top: 60px;
-  overflow: hidden;
-  content: "<";
+.social__share--twitter {
+  background-color: #00adf2;
+  background-image: url("article/icon-twitter.png");
+}
+.social__share--google {
+  background-color: #ce4435;
+  background-image: url("article/icon-google.png");
+}
+.social__share--pinterest {
+  background-color: #e51616;
+  background-image: url("article/icon-pinterest.png");
 }
 
 /* 푸터 */
 
 .footer {
-  width: 960px;
-  height: 90px;
-  background-color: #333;
-  margin: 0 auto;
+  margin-top: 43px;
 }
 .footer__button {
   background-color: yellow;
-  vertical-align: middle;
+  color: #1f4ba5;
+  padding-left: 20px;
+  background: url("article/icon-backward.png") no-repeat;
+  background-size: 10px 8px;
+  background-position: 0 4px;
 }
