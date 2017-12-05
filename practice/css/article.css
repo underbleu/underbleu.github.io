@@ -69,61 +69,60 @@ a:hover, a:focus {
   width: 960px;
   margin: 0 auto;
 }
-.article-container {
-  padding:
+.section {
+  margin-top: 45px;
 }
 
 /* 헤더 */
 
-.header {
-  background-color: black;
-}
 .navigation {
   position: relative;
-  padding-left: 120px;
   height: 60px;
-}
-.logo {
-  position: absolute;
-  top: 10px;
-  left: 0;
+  margin-top: 50px;
 }
 .main-menu {
-  color: #fff;
+  color: #182e4f;
   text-transform: capitalize;
   font-size: 0;
-  /* padding-left: 120px; */
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
 }
-.main-menu__item {
+.main-menu__item a {
   display: inline-block;
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 60px;
-  padding: 0 30px;
-  font-weight: 100;
+  padding: 0 20px;
 }
 
 /* 메인 콘텐츠 */
 
 .pg-wrapper {
-  background-color: #f8f9fa;
+  background: #f8f9fa linear-gradient(to bottom, #fff 0%, #f8f9fa 10%, #f8f9fa 100%);
 }
 .article-container {
   background-color: #fff;
   padding: 127px 240px 0 120px;
   position: relative;
-  box-shadow: 0 10px 50px rgba(0, 0, 0, .1);
+  box-shadow: 0 5px 50px rgba(0, 0, 0, .15);
 }
+
+/* 뉴스 헤드라인 */
+
 .headline {
   color: #222;
   font-family: 'VarelaRound-Regular', sans-serif;
   font-size: 4.8rem;
   padding-right: 120px;
   margin-top: 40px;
+  background-color: lightcoral;
 }
 .metadata {
   position: absolute;
   top: 127px;
+  /* absolute로 띄우니 width 잃음. width 직접 지정해주는 것보다 좋은방법 없을까?  */
   width: 720px;
+  background-color: lightblue;
 }
 .metadata__category {
   font-family: 'Oswald-Bold', sans-serif;
@@ -152,6 +151,7 @@ a:hover, a:focus {
   font-size: 2.4rem;
   color: #868686;
   margin-top: 49px;
+  background-color: lemonchiffon;
 }
 
 /* 섹션 1 */
@@ -159,33 +159,108 @@ a:hover, a:focus {
 .section1 {
   margin-top: 45px;
 }
+
+/* 이미지상자 모듈 */
+
 .media {
-  float: left;
-  width: 100%;
-}
-.media--wide {
-  width: 960px;
-  position: relative;
-  left: -120px;
+  background-color: aqua;
 }
 .media__caption {
   font-family: 'PT_Serif-Web-Italic', serif;
-  margin-top: 30px;
-  margin-bottom: 50px;
   color: #b8b8b8;
   font-size: 1.2rem;
   text-align: center;
+  margin-top: 19px;
+  background-color: pink;
 }
 .media__caption--wide {
-  padding-left: 120px;
+  margin-top: 30px;
   text-align: left;
+  padding-left: 120px;
 }
-.carousel__panel {
+.container--wide {
+  /* css transform이 성능이 좋음 */
   width: 960px;
+  transform: translateX(-120px);
+  /* 레이어띄우기 배치
   position: relative;
-  left: -120px;
-  margin-top: 57px;
+  left: -120px;*/
+  /* 음수마진 배치
+  margin-left: -120px; */
+  background-color: yellow;
 }
+.text {
+  margin-top: 50px;
+  background-color: springgreen;
+}
+.carousel {
+  background-color: lawngreen;
+  margin-top: 57px;
+  /* overflow: hidden;
+  overflow는 트릭 자식콘텐츠가 많으면 잘릴수 있다
+  -> 가상요소에 clearfix로 대체 */
+}
+.carousel__item {
+  float: left;
+}
+.btn-carousel {
+  padding-left: 120px;
+  margin-top: 41px;
+  /* 인라인블록 사이 여백제거 */
+  font-size: 0;
+}
+.btn {
+  font-size: 1.4rem;
+  width: 60px;
+  height: 60px;
+  /* padding-top: 60px; */
+  /* overflow: hidden; */
+  background-color: white;
+  border: 1px solid #ececec;
+  cursor: pointer;
+  vertical-align: middle;
+  position: relative;
+}
+.btn::after {
+  display: inline-block;
+  content: "\e804";
+  font-family: 'fontello';
+  font-size: 1.4rem;
+  line-height: 60px;
+  color: #868686;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: mediumspringgreen;
+}
+.btn__prev::after {
+  transform: rotate(-180deg);
+}
+.panel-count {
+  display: inline-block;
+  font-size: 1.4rem;
+  color: #868686;
+  /* line-height: 60px; */
+  background-color: aqua;
+  vertical-align: middle;
+  margin-left: 30px;
+  width: 29px;
+  height: 13px;
+}
+.panel-count sup {
+  font-size: .8rem;
+}
+
+/* .panel-count span:nth-child(n+2) {
+  font-size: .8rem;
+  vertical-align: top;
+  background-color: white;
+} */
+
+
+/* span 3개자체에 클래스줘서 우선순위 낮춰주기 */
+
 
 /* 섹션 2 */
 
@@ -287,4 +362,17 @@ a:hover, a:focus {
   padding-top: 60px;
   overflow: hidden;
   content: "<";
+}
+
+/* 푸터 */
+
+.footer {
+  width: 960px;
+  height: 90px;
+  background-color: #333;
+  margin: 0 auto;
+}
+.footer__button {
+  background-color: yellow;
+  vertical-align: middle;
 }
