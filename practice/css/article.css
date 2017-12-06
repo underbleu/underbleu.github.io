@@ -108,6 +108,7 @@ a:hover, a:focus {
   padding: 127px 240px 42px 120px;
   position: relative;
   box-shadow: 0 5px 50px rgba(0, 0, 0, .15);
+  margin-bottom: 100px;
 }
 
 /* 뉴스 헤드라인 */
@@ -217,13 +218,26 @@ a:hover, a:focus {
   font-size: 1.4rem;
   width: 60px;
   height: 60px;
-  padding-top: 60px;
-  overflow: hidden;
   cursor: pointer;
-  background-image: url("article/icon-btn.png");
   vertical-align: middle;
+  /* IR기법 overflow트릭 
+  padding-top: 60px;
+  overflow: hidden; 
+  background-image: url("article/icon-btn.png");*/
+  /* IR기법 BEST -> 가상요소로 텍스트 덮어주기*/
+  position: relative;
 }
-.btn__next {
+.btn::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("article/icon-btn.png") no-repeat;
+}
+.btn__next::after {
   background-position: 100% 0;
 }
 
