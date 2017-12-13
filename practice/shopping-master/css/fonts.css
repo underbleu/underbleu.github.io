@@ -1,0 +1,30 @@
+@font-face{
+    font-family: "Oswald-Light";
+    src:url("./font/Oswald-Light.woff");
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face{
+    font-family: "Oswald-Regular";
+    src:url("./font/Oswald-Regular.woff");
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face{
+    font-family: "Oswald-Bold";
+    src:url("./font/Oswald-Bold.woff");
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face{
+    font-family: "PTSerif-Italic";
+    src:url("./font/PT_Serif-Web-Italic.woff");
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face{
+    font-family: "VarelaRound-Regular";
+    src:url("./font/VarelaRound-Regular.woff");
+    font-weight:normal;
+    font-style:normal;
+}
