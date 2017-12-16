@@ -2,140 +2,130 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>자바스크립트 계산기</title>
-    <style type="text/css">
-        input.btn {
-            width: 50px;
-            height: 40px;
-            margin: 5px;
-            font-size: 15pt;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>자바스크립트 계산기</title>
+  <style type="text/css">
+    input.btn {
+      width: 50px;
+      height: 40px;
+      margin: 5px;
+      font-size: 15pt;
+    }
 
-        .clr,
-        .equal {
-            width: 112px;
-            height: 40px;
-            margin: 5px;
-            font-size: 15pt;
-        }
+    .clr,
+    .equal {
+      width: 112px;
+      height: 40px;
+      margin: 5px;
+      font-size: 15pt;
+    }
 
-        #disp {
-            width: 295px;
-            height: 40px;
-            margin: 5px;
-            border: 2px solid green;
-            font-size: 22pt;
-            text-align: right;
-        }
-    </style>
+    #disp {
+      width: 295px;
+      height: 40px;
+      margin: 5px;
+      border: 2px solid green;
+      font-size: 22pt;
+      text-align: right;
+    }
+  </style>
 </head>
 
 <body>
-    <h2 align="center">계 산 기</h2>
-    <form name="calform">
-        <table border="0" align="center" cellspacing="0" style="border:2px solid blue;  ">
-            <tr>
-                <td colspan="5">
-                    <h1 class="display">0</h1>
-                    <input type="text" name="disp" id="disp" value="0">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="button" value="7" class="btn" onclick="but('7')">
-                </td>
-                <td>
-                    <input type="button" value="8" class="btn" onclick="but('8')">
-                </td>
-                <td>
-                    <input type="button" value="9" class="btn" onclick="but('9')">
-                </td>
-                <td colspan="2">
-                    <input type="button" value="C" class="clr" onclick="c()">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="button" value="4" class="btn" onclick="but('4')">
-                </td>
-                <td>
-                    <input type="button" value="5" class="btn" onclick="but('5')">
-                </td>
-                <td>
-                    <input type="button" value="6" class="btn" onclick="but('6')">
-                </td>
-                <td>
-                    <input type="button" value="/" class="btn" onclick="but('/')">
-                </td>
-                <td>
-                    <input type="button" value="%" class="btn" onclick="but('%')">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="button" value="1" class="btn" onclick="but('1')">
-                </td>
-                <td>
-                    <input type="button" value="2" class="btn" onclick="but('2')">
-                </td>
-                <td>
-                    <input type="button" value="3" class="btn" onclick="but('3')">
-                </td>
-                <td>
-                    <input type="button" value="*" class="btn" onclick="but('*')">
-                </td>
-                <td>
-                    <input type="button" value="+" class="btn" onclick="but('+')">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="button" value="0" class="btn" onclick="but('0')">
-                </td>
-                <td>
-                    <input type="button" value="." class="btn" onclick="but('.')">
-                </td>
-                <td colspan="2">
-                    <input type="button" value="=" class="equal" onclick="total()">
-                </td>
-                <td>
-                    <input type="button" value="-" class="btn" onclick="but('-')">
-                </td>
-            </tr>
-        </table>
-    </form>
+  <h2 align="center">계 산 기</h2>
+  <form name="calform">
+    <table border="0" align="center" cellspacing="0" style="border:2px solid blue;  ">
+      <tr>
+        <td colspan="5">
+          <h1 class="display"></h1>
+          <input type="text" name="disp" id="disp" value="0">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" value="7" class="btn" onclick="but('7')">
+        </td>
+        <td>
+          <input type="button" value="8" class="btn" onclick="but('8')">
+        </td>
+        <td>
+          <input type="button" value="9" class="btn" onclick="but('9')">
+        </td>
+        <td colspan="2">
+          <input type="button" value="C" class="clr" onclick="c()">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" value="4" class="btn" onclick="but('4')">
+        </td>
+        <td>
+          <input type="button" value="5" class="btn" onclick="but('5')">
+        </td>
+        <td>
+          <input type="button" value="6" class="btn" onclick="but('6')">
+        </td>
+        <td>
+          <input type="button" value="/" class="btn" onclick="but('/')">
+        </td>
+        <td>
+          <input type="button" value="%" class="btn" onclick="but('%')">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" value="1" class="btn" onclick="but('1')">
+        </td>
+        <td>
+          <input type="button" value="2" class="btn" onclick="but('2')">
+        </td>
+        <td>
+          <input type="button" value="3" class="btn" onclick="but('3')">
+        </td>
+        <td>
+          <input type="button" value="*" class="btn" onclick="but('*')">
+        </td>
+        <td>
+          <input type="button" value="+" class="btn" onclick="but('+')">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" value="0" class="btn" onclick="but('0')">
+        </td>
+        <td>
+          <input type="button" value="." class="btn" onclick="but('.')">
+        </td>
+        <td colspan="2">
+          <input type="button" value="=" class="equal" onclick="total()">
+        </td>
+        <td>
+          <input type="button" value="-" class="btn" onclick="but('-')">
+        </td>
+      </tr>
+    </table>
+  </form>
 </body>
 
 <script>
-    let arr = [];
+  // 버튼 입력
+  function but(val) {
+    console.log(val);
+    document.querySelector(".display").innerHTML = "0";
+  }
 
-function but(val) {
- if (!(arr.length === 0 && isNaN(val))) {
-   if ((isNaN(arr[arr.length - 1]) && isNaN(val))) {
-     arr.pop();
-   }
-   arr.push(val);
- }
- document.querySelector(".display").innerHTML = arr.join("");
-}
+  // 리셋
+  function c() {
+    document.querySelector(".display").innerHTML = "0";
+  }
 
-//clear display 값이 0
-function c() {
- arr = [];
- document.querySelector(".display").innerHTML = "0";
-}
-
-//계산된 값
-function total() {
- let total = eval(arr.join(""))
- arr = [];
- arr.push(total);
- document.querySelector(".display").innerHTML = total;
-}
-
+  // 계산하기
+  function total() {
+    let totalNumver = eval(totalNumberString);
+    document.querySelector(".display").innerHTML = totalNumber;
+  }
 </script>
 
 </html>
