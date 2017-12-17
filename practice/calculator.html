@@ -110,22 +110,37 @@
 </body>
 
 <script>
-  // 버튼 입력
-  function but(val) {
-    console.log(val);
-    document.querySelector(".display").innerHTML = "0";
-  }
+  document.querySelector(".display").innerHTML = "0";
+  let arr = [];
 
-  // 리셋
-  function c() {
-    document.querySelector(".display").innerHTML = "0";
+// 버튼 입력
+function but(val) {
+  // 1. 첫요소로 연산자가 들어올 경우를 제거
+  if(!(arr.length === 0 && isNaN(val))){
+    // 2. 중복으로 연산자가 들어올 경우를 제거
+    if(isNaN(arr[arr.length - 1]) && isNaN(val)){
+      arr.pop();
+    }
+    arr.push(val);
+    document.querySelector(".display").innerHTML = arr.join('');
   }
+  console.log(val);
+}
 
-  // 계산하기
-  function total() {
-    let totalNumver = eval(totalNumberString);
-    document.querySelector(".display").innerHTML = totalNumber;
-  }
+// 리셋
+function c() {
+  arr = [];
+  document.querySelector(".display").innerHTML = "0";
+  console.log('reset');
+}
+
+// 계산하기
+function total() {
+  let total = eval(arr.join(''));
+  document.querySelector(".display").innerHTML = total;
+  console.log('total');
+}
+
 </script>
 
 </html>
