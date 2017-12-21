@@ -14,6 +14,7 @@ function nextStage(){
   // 다음단계로 전환
   stage++;
   problem = [randomColor(), randomColor(), randomColor()];
+  correctAnswer = Math.floor(Math.random() * 3);
 }
 
 function draw(){
@@ -22,13 +23,14 @@ function draw(){
     el.style.backgroundColor = problem[index];
   })
   document.querySelector('.rgb-text').textContent = problem[correctAnswer];
+  document.querySelector('.score').textContent = stage;
 }
 
 function init(){
   // 초기화 -> 맨처음, 틀렸을때 사용
   stage = 0;
   problem = [randomColor(), randomColor(), randomColor()];
-  correctAnswer = 0;
+  correctAnswer = Math.floor(Math.random() * 3);
 }
 
 document.querySelectorAll('.box').forEach((el, index) => {
