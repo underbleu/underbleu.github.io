@@ -6,13 +6,9 @@ function randomColor(){
   return `rgb(${random255()}, ${random255()}, ${random255()})`
 }
 
-// document.querySelectorAll('.box').forEach(el => {
-//   el.style.backgroundColor = randomColor();
-// })
-
-let stage = 0;
-let problem = [randomColor(), randomColor(), randomColor()];
-let correctAnswer = 0;
+let stage;
+let problem;
+let correctAnswer;
 
 function nextStage(){
   // 다음단계로 전환
@@ -28,17 +24,26 @@ function draw(){
   document.querySelector('.rgb-text').textContent = problem[correctAnswer];
 }
 
+function init(){
+  // 초기화 -> 맨처음, 틀렸을때 사용
+  stage = 0;
+  problem = [randomColor(), randomColor(), randomColor()];
+  correctAnswer = 0;
+}
+
 document.querySelectorAll('.box').forEach((el, index) => {
   el.addEventListener('click', e => {
     if(index === correctAnswer){
       nextStage();
       draw();
     }else{
-      //재시작
+      init();
+      draw();
     }
   });
 })
 
+init();
 draw();
 
 
