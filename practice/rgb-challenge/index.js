@@ -10,15 +10,15 @@ let stage;
 let problem;
 let correctAnswer;
 
+// 다음단계로 전환
 function nextStage(){
-  // 다음단계로 전환
   stage++;
   problem = [randomColor(), randomColor(), randomColor()];
   correctAnswer = Math.floor(Math.random() * 3);
 }
 
+// 화면 그리기
 function draw(){
-  // 화면 그리기
   document.querySelectorAll('.box').forEach((el, index) => {
     el.style.backgroundColor = problem[index];
   })
@@ -26,8 +26,8 @@ function draw(){
   document.querySelector('.score').textContent = stage;
 }
 
+// 초기화 -> 맨처음, 틀렸을때 사용
 function init(){
-  // 초기화 -> 맨처음, 틀렸을때 사용
   stage = 0;
   problem = [randomColor(), randomColor(), randomColor()];
   correctAnswer = Math.floor(Math.random() * 3);
