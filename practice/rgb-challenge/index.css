@@ -7,12 +7,6 @@ html, body{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.box{
-  height: 50px;
-  width: 50px;
-  border: 1px solid black;
-}
-
 .wrap{
   display: flex;
   flex-direction: column;
@@ -20,11 +14,12 @@ html, body{
   flex-grow: 1;
 }
 .top{
-  background-color: steelblue;
+  background-color: rgb(109, 3, 248);
   line-height: 1.1;
   font-size: 10px;
   text-align: center;
-  padding: 10px 0;
+  padding: 15px 0;
+  /* opacity: .7; */
 }
 .top span{
   display: block;
@@ -37,7 +32,6 @@ html, body{
   flex-grow: 1;
   background-color: #232323;
   display: flex;
-  text-align: center;
 }
 
 .game-center{
@@ -45,4 +39,41 @@ html, body{
   flex-grow: 1;
   align-items: center;
   justify-content: center;
+}
+.rgb-text{
+  text-align: center;
+}
+.boxes{
+  display: flex;
+  margin-top: 20px;
+}
+.box{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.box:last-child{
+  margin-right: 0;
+}
+
+/* modal */
+.modal{
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+}
+.modal.show{
+  display: flex;
+}
+.modal-button{
+  border: 1px solid white;
+  padding: 10px;
+  cursor: pointer;
 }
