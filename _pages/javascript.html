@@ -1,0 +1,12 @@
+---
+layout: default
+title: Home
+permalink: /javascript/
+---
+
+<div class="posts">
+  {% for post in site.categories.javascript %}
+    {{ post.title }}
+  {% endfor %}
+</div>
+
