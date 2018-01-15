@@ -1,16 +1,22 @@
-  @charset "utf-8";
+@charset "utf-8";
 @import url("./normalize.css");
 @import url("./fonts.css");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 /* Reset Css */
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, button, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+}
+ul {
+  list-style: none;
 }
 
 /* 본문 스타일 */
@@ -41,7 +47,7 @@ a:hover, a:focus {
 
 /* 숨김 콘텐츠 */
 
-.readable-hidden, .a11y {
+.readable-hidden, .a11y, legend {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -51,6 +57,19 @@ a:hover, a:focus {
 
 /* 건너뛰기 링크 */
 
+.a11y:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: auto;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid white;
+}
 
 /* 공통 스타일 */
 
@@ -59,54 +78,134 @@ a:hover, a:focus {
   display: block;
   clear: both;
 }
-@media screen and (max-width: 999px) {
-  /* 기본 레이아웃 */
-  .container {}
-  /* 헤더 */
-  .header {
-    background-color: #38302e;
-  }
-  /* 로고 */
-  /* 멤버 링크 */
-  .member {
-    background-color: #988574;
-    text-align: right;
-  }
-  .member li {
-    display: inline-block;
-  }
-  /* 검색창 */
-  /* 네비게이션 */
-  .navigation {
-    display: none;
-  }
-  /* 메인 콘텐츠 */
-  .main-content {
-    background-color: yellow;
-  }
-  .recommend {
-    background-color: lime;
-  }
-  .news {
-    background-color: aqua;
-  }
-  .board {
-    background-color: pink;
-  }
-  .favorite {
-    background-color: salmon;
-  }
-  .twitter {
-    background-color: saddlebrown;
-  }
-  /* 슬로건 */
-  .slogan {
-    background-color: green;
-  }
-  /* 푸터 */
-  .footer-bg {
-    background-color: blue;
-  }
-  .footer {
-    background-color: purple;
-  }
+
+/* 모바일 */
+
+
+/* 기본 레이아웃 */
+
+.main-content, .slogan, .footer {
+  padding: 0 20px;
+}
+
+/* 헤더 */
+
+.header {
+  background-color: #38302e;
+  /* height: 180px; */
+  position: relative;
+  padding: 50px 0 25px 0;
+}
+
+/* 로고 */
+
+.logo {
+  padding: 0 20px;
+}
+.logo a {
+  height: auto;
+  cursor: pointer
+}
+
+/* 멤버 링크 */
+
+.member {
+  background-color: #998575;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+.member li {
+  font-size: 0;
+  padding: 10px 0;
+}
+.member a {
+  color: white;
+  font-size: 1.4rem;
+  padding: 8px 10px;
+}
+
+/* 검색창 */
+
+.search {
+  /* background-color: red; */
+  width: 100%;
+  padding: 0 20px;
+  margin-top: 25px;
+  font: 0;
+  background-color: orange;
+}
+.search input {
+  width: calc(100% - 40px);
+  height: 25px;
+  border-radius: 5px;
+}
+.btn-search {
+  background-color: #998575;
+  width: 30px;
+  height: 30px;
+  float: right;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/* 네비게이션 */
+
+.navigation {}
+.btn-menu, .btn-menu::before, .btn-menu::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: white;
+}
+.btn-menu {
+  position: absolute;
+  top: 75px;
+  right: 20px;
+}
+.btn-menu::after {
+  background-color: blue;
+}
+.main-menu {
+  display: none;
+}
+
+/* 메인 콘텐츠 */
+
+.main-content {
+  background-color: yellow;
+}
+.recommend {
+  background-color: lime;
+}
+.news {
+  background-color: aqua;
+}
+.board {
+  background-color: pink;
+}
+.favorite {
+  background-color: salmon;
+}
+.twitter {
+  background-color: saddlebrown;
+}
+
+/* 슬로건 */
+
+.slogan {
+  background-color: green;
+}
+
+/* 푸터 */
+
+.footer-bg {
+  background-color: #998575;
+  color: white;
+}
+.footer {}

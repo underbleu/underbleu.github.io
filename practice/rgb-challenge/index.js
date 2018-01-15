@@ -37,13 +37,9 @@ document.querySelectorAll('.box').forEach((el, index) => {
   el.addEventListener('click', e => {
     if(index === correctAnswer){
       document.querySelector('.correct').classList.add('show');
-      // nextStage();
-      // draw();
     }else{
       document.querySelector('.wrong').classList.add('show');
       document.querySelector('.modal-score').textContent = 'SCORE: ' + stage;
-      // init();
-      // draw();
     }
     el.classList.add('show');
   });

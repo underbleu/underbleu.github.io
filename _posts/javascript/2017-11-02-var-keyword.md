@@ -94,12 +94,12 @@ console.log(typeof z); // undefined, since z doesn't exist yet
 function a() { // when a is called,
   var y = 2;   // y is declared local to function a, then assigned a value of 2
 
-  console.log(x, y);   // 0 2 
+  console.log(x, y);   // 0 2
 
   function b() {       // when b is called
     x = 3;  // assigns 3 to existing global x, doesn't create a new global var
     y = 4;  // assigns 4 to existing outer y, doesn't create a new global var
-    z = 5;  // creates a new global variable z and assigns a value of 5. 
+    z = 5;  // creates a new global variable z and assigns a value of 5.
   }         // (Throws a ReferenceError in strict mode.)
 
   b();     // calling b creates z as a global variable

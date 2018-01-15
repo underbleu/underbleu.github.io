@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.content {
+  width: 960px;
+  margin: 0 auto;
+  background-color: lime;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.col {
+  height: 360px;
+  float: left;
+}
+.col-1 {
+  width: 120px;
+  background-color: red;
+}
+.col-2 {
+  /* width: 240px; */
+  width: 25%;
+  background-color: orange;
+}
+.col-3 {
+  width: 360px;
+}
+.col-4 {
+  width: 480px;
+  background-color: purple;
+}
+.col-5 {
+  width: 600px;
+}
+.col-6 {
+  width: 720px;
+}
+.col-7 {
+  width: 840px;
+}
+.col-8 {
+  width: 960px;
+}
+@media only screen and (max-width: 460px) {
+  .content {
+    /* 최소크기 아이폰5 */
+    width: 320px;
+  }
+  .m-col-1 {
+    width: 80px;
+  }
+  .m-col-2 {
+    width: 160px;
+    background-color: blue;
+  }
+  .m-col-3 {
+    width: 240px;
+  }
+  .m-col-4 {
+    width: 320px;
+  }
+}
