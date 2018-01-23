@@ -13,6 +13,15 @@
 * React요소는 변경불가능(immutable) 한 것처럼 쓴다.
 => immutable의 진짜의미: 변경하지 않고, 변경하고 싶다면 매번 새로 생성한다.
 
+## React, ReactDOM
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+```
+* 리액트 = UI 라이브러리
+* 리액트 DOM = 라이브러리를 웹사이트에 출력해줌
+* 리액트 Native = 라이브러리를 모바일앱에 출력해줌
+
 ## React는 필요한 것만 업데이트한다.(마법같은 일!)
 `ref().once('value').innerHTML=""`
 이전에 Firebase로 todo리스트 만들때, 업데이트가 있을시마다 innerHTML을 비우고 새로 내용을 넣어줬던건 굉장히 비효율적인 일이었다
@@ -101,3 +110,28 @@ JSX문법에선 if..else를 사용할 수 없기때문에, 삼항연산자를 �
 React는 `true, false, null, undefined`를 렌더링하지 않는다. -> 이를 잘활용하는 코드를 쓰곤한다
 a && b a가 true일때 b코드 실행
 `isLoggedIn && <div>welcome</div>`
+
+
+---
+# 노마드코더
+
+```js
+//App.js
+import Movie from './Movie';
+
+class App extends from Component{
+  render(){
+    return(
+      <div className="App">
+        <Movie />
+      </div>
+    )
+  }
+}
+
+export default App;
+
+//index.js
+ReactDOM.render(<App />, document.getElementById('root'));
+```
+Component > render > return > JSX(리액트로 작성한 html)
