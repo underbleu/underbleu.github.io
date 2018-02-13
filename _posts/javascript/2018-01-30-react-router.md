@@ -121,7 +121,8 @@ insert_final_newline = true
 ## 개발순서
 필히 기능단위로 차곡차곡 절차를 밟으며 개발을 진행해야한다.
 개발순서 계획에 따라 프로젝트를 성패를 좌우하기 때문에 아주 중요하다.
-**판서이미지 추가하기 !!!!!!!!!**
+
+>![개발순서]({{site.baseurl}}/img/dev-process.png)
 >1. 화면 (Presentational Component)
 >2. 라우터
 >3. 컨테이너 (Container Component)
