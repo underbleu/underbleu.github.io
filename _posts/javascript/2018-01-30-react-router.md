@@ -1,3 +1,13 @@
+---
+layout: post
+title: 강의노트 react-router
+category: react
+permalink: /react/:title
+
+tags: [React]
+comments: true
+---
+
 # 개발환경 세팅
 
 >개발환경 세팅
@@ -7,15 +17,16 @@
 
 ## 1. storybook
 >[storybook 공식문서](https://storybook.js.org/)
-1. storybook 설치
+1. storybook 설치  
 `npm i --save-dev @storybook/react`
 2. 설치가 완료되면, package.json에 devDependencies에 `"@storybook/react"`생성된다.
     * `"dependencies"` : 서비스운영에 진짜 필요한 것들 (`$ npm install`시 자동설치됨)
     * `"devDependencies"` : 개발할때만 사용하는 라이브러리를 따로 설정 (자동설치안됨)
     * 두 개를 구분하여 설치할 파일들의 의존성관리를 따로 해주면 좀 더 효율적이다.
 
-3. package.json에 scripts 설정추가 (실행명령어)
+3. scripts에 storybook 실행명령어 추가 
 ```js
+// package.json
 {
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook"
@@ -55,7 +66,7 @@ storiesOf('button', module)
 
 ## 2. ESLint
 * `create-react-app`으로 프로젝트를 생성하면 자동으로 node_modules ESLint가 깔린다
-* `$ npx eslint`로 ESLing를 바로 실행시킬 수 있다
+* `$ npx eslint`로 ESLint를 바로 실행시킬 수 있다
 * ESLint 설정파일에서 코딩컨벤션을 세세하게 설정할 수 있다. -> [ESLint_rules](https://eslint.org/docs/rules/)
 * src폴더에 `.eslintrc`파일을 생성하여 규칙 설정 코드를 붙여넣는다.
 ```js
@@ -66,8 +77,8 @@ storiesOf('button', module)
   }
 }
 ```
-* 일단 우리는 [create-react-app](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#displaying-lint-output-in-the-editor) 방식을 사용한다.
-  * air-bnb의 ESLint규칙도 많이 사용한다.
+* 일단 우리는 [create-react-app](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#displaying-lint-output-in-the-editor) 방식을 사용한다  
+( air-bnb의 ESLint규칙도 많이 사용한다 )
 ```js
 // src폴더에 `.eslintrc`파일을 생성하여 아래코드를 붙여넣는다.
 {
@@ -95,6 +106,7 @@ insert_final_newline = true
 ```
 
 ---
+
 # 게시판 실습 (with Redux)
 
 ## CSS라이브러리 세팅
@@ -115,7 +127,6 @@ insert_final_newline = true
 
 >재사용이 많을경우 styled-components로, 일회성 혹은 급하게 쓸경우에만 inline-style로 스타일링해준다.
 
-
 ---
 
 ## 개발순서
@@ -130,7 +141,8 @@ insert_final_newline = true
 
 ## firebase 설치 & 설정
 1. `$ npm install firebase`
-2. 파이어베이스 설정코드 추가
+2. 파이어베이스 설정코드 추가  
+(파이어베이스 콘솔 > 프로젝트 > 웹앱추가 코드 복사)
 ```js
 // src/index.js
 import * as firebase from 'firebase';
@@ -147,8 +159,8 @@ firebase.initializeApp(config);
 ```
 
 ## Container Component 생성 & firebase
-1. src/containers 폴더 생성 (Containter 컴포넌트 전용 폴더)
-cf. src/components 폴더 (Presentational 컴포넌트 전용 폴더)
+1. src/containers 폴더 생성 (Containter 컴포넌트 전용 폴더)  
+src/components 폴더 (Presentational 컴포넌트 전용 폴더)
 2. LoginScreenContainer.js 생성
 3. LoginScreen.js -> 구글로그인 기능 추가
 ```js
@@ -166,12 +178,15 @@ export default class LoginScreen extends Component {
 
 4. 이벤트핸들러 action에 넣어, 스토리보드에서 잘 동작하는지 테스트
 
+---
 
 ## react-router-dom 설정
 
 1. `containters/LoginScreenContainer.js`에 로그인 기능 구현
-2. 라우터 설치 `$ npm install react-router-dom`
-3. Redirect 불러오기`import {Redirect} from 'react-router-dom';`
+2. 라우터 설치  
+`$ npm install react-router-dom`
+3. Redirect 불러오기  
+`import {Redirect} from 'react-router-dom';`
 
 ```js
 import React, {Component} from 'react';
@@ -211,8 +226,8 @@ export default class LoginScreenContainer extends Component {
 logo.svg, App.css, App.test.js -> 필요없는 파일 삭제
 
 
-src/App.js
 ```js
+// src/App.js
 import React, { Component } from 'react';
 import {
   BrowserRouter,
@@ -239,15 +254,16 @@ export default App;
 ---
 
 ## 글 목록페이지
+
 >복잡한 레이아웃. 컴포넌트를 어떻게 분리할까 ?
 Presentational / Container Component 개발계획 수립
 1. 고정 nav 컴포넌트 (재사용성고려) ->  PC + CC
 2. 글 목록 컴포넌트 -> PC + CC
 3. 새 글쓰기 버튼 -> PC + CC
-4. 푸터 (회사정보를 보여줌) -> PC (CC는 아님)
+4. 푸터 (단순히 회사정보를 보여줌) -> PC (CC는 아님)
 
 
-[semantic-ui > Menu](https://react.semantic-ui.com/collections/menu#menu-example-menus)컴포넌트 추가
+### [semantic-ui > Menu](https://react.semantic-ui.com/collections/menu#menu-example-menus) 컴포넌트 추가
 
 ```js
 // components/TopMenu.js
@@ -273,14 +289,10 @@ export default class TopMenu extends Component {
   }
 }
 ```
-story book에서 확인
 
-
-'react-router' a태그 대신 Link 컴포넌트로 사용 (새로고침 없게)
-`<Menu.Item as="a" href="https://google.com" name='browse'>` 새로고침O
+### 'react-router' a태그 대신 Link 컴포넌트로 사용 (새로고침 없게)
+`<Menu.Item as="a" href="https://google.com" name='browse'>` 새로고침O  
 `<Menu.Item as="{Link}" to="https://google.com" name='browse'>` 새로고침X
-
-
 
 ```js
 // TopMenu.js
@@ -300,7 +312,6 @@ export default class TopMenu extends Component {
         <Menu.Item {...logoProps} name='browse'>
           게시판
         </Menu.Item>
-
         <Menu.Menu position='right'>
           <Menu.Item {...accountProps} name='signup'>
             계정
@@ -321,7 +332,7 @@ import TopMenu from '../components/TopMenu';
 
 const logoProps = {
   as: Link,
-  to: '/link'
+  to: '/list'
 };
 
 const accoutProps = {

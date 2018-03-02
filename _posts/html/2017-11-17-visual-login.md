@@ -9,7 +9,7 @@ comments: true
 ---
 
 ## 비주얼 영역
-코드삽입 
+코드삽입
 
 ### Background 속성
 레이어 쌓이는 순서를 고려한 배경넣기 -> `.container`에 flower이미지보다 그라디언트를 나중에 선언
@@ -33,26 +33,26 @@ scroll(기본) fixed
 background: #000 url(images/bg.gif) no-repeat left top;
 font: italic bold .8em/1.2 Arial, sans-serif;
 
-/* @keyframes duration | timing-function | delay | 
+/* @keyframes duration | timing-function | delay |
 iteration-count | direction | fill-mode | play-state | name */
 animation: 3s ease-in 1s 2 reverse both paused slidein;
 <single-animation-play-state> = running | paused
 <single-animation-fill-mode> = none | forwards | backwards | both
 ease | ease-in | ease-out | ease-in-out | cubic-bezier(<number>, <number>, <number>, <number>)
 -----
-#### 특수문자 
+#### 특수문자
 [특수문자 Entity Name](https://www.w3schools.com/html/html_entities.asp)
 `&lt;` <
 `&gt;` >
 `&amp;` &
-`&nbsp;` 공백문자 
+`&nbsp;` 공백문자
 공백|non-breaking space|`&nbsp;`
 ---|---|---
 <|less than|`&lt;`
->|greater than|`&gt;`	
+>|greater than|`&gt;`
 &|ampersand|`&amp;`
 "|double quotation mark|`&quot;`
-'|single quotation mark (apostrophe)|`&apos;` 
+'|single quotation mark (apostrophe)|`&apos;`
 
 -----
 ## CSS Animation
@@ -75,17 +75,17 @@ ease | ease-in | ease-out | ease-in-out | cubic-bezier(<number>, <number>, <numb
 
 ### 1. 텍스트 애니메이션  .text-ani
 
-코드 
+코드
 
 1. translte방법과 -> 성능이 더 좋음!
-2. absolute top left방법 두개잇음  
+2. absolute top left방법 두개잇음
 계속 이미지를 다시그림repainting. 성능 안좋음. 특히 모바일환경에선 쓰지말도록(모바일은 IE안쓰닌깐)
 -> [게코 렌더링](https://www.youtube.com/watch?v=ZTnIxIA5KGw)
 [이거이쁨](https://codepen.io/sergiompereira/pen/dqvwJ?q=text+shadow+animation&limit=all&type=type-pens)
 
 상자가 통채로 옆으로 가서 스크롤바 생기는 이슈
 1. 박스width설정 - 콘텐츠양에 따라 유동적이지 않음
-2. display: inline-block; 
+2. display: inline-block;
 3. absolute로 레이로 띄워짐
 4. float: left띄워짐 뜨면 박스크기가 컨텐츠크기만해짐
 >항상 환경에 따라 다양한 방법중 어떤것을 쓸지 생각하는 습관을 가지도록
@@ -104,7 +104,7 @@ svg로 만들면 좋을듯
 3. 클래스 네이밍하기
 
 >form > fieldset > legend + label
-legend와 관련된 요소들을 fieldset이라는 컨테이너에 담는다. 
+legend와 관련된 요소들을 fieldset이라는 컨테이너에 담는다.
 div와 같이 그루핑하는 역할이라는 공통점이 있지만, fieldset을 form전용 컨테이너이다
 div는 범용적 fieldset은 폼전용 컨테이너
 
@@ -126,7 +126,7 @@ CSS유지보수 편한 방법론 BEM. 넷플릭스는 이방법 채용중 [css B
 * div < h1 중립적인 Grouping + 헤딩을 포함하여 아웃라인 형성
 * address주소 div저작권
 
->1px의 오차가 중요하지 않은 것은 아니다. 하지만 시간을 많이 할애할만큼 진짜 critic한 이슈인지 고민해봐야한다. 브라우저 렌더링마다 이슈가 굉장히! 다양하기 때문이다. 
+>1px의 오차가 중요하지 않은 것은 아니다. 하지만 시간을 많이 할애할만큼 진짜 critic한 이슈인지 고민해봐야한다. 브라우저 렌더링마다 이슈가 굉장히! 다양하기 때문이다.
 
 ## Media Query
 참고글 [css 미디어쿼리의 이해](http://naradesign.net/wp/2012/05/30/1823/)
@@ -137,13 +137,13 @@ CSS유지보수 편한 방법론 BEM. 넷플릭스는 이방법 채용중 [css B
 모바일 데스크탑 정보량이 많이 차이나지 않을경우
 네이버도 반응형 아니다. 웹용. 앱용 url자체가 다름
 
-* 렌더링하는 크기가 아닌 디바이스의 물리적 크기로 화면 보내달라는 설정  
+* 렌더링하는 크기가 아닌 디바이스의 물리적 크기로 화면 보내달라는 설정
 `<meta name="viewport" content="width=device-width">`
--> meta태그 좀더 공부해보기 
-max scale min scale 확대/축소 몇배이상. 
+-> meta태그 좀더 공부해보기
+max scale min scale 확대/축소 몇배이상.
 
 * 접근성을 위하 "배경과 전경색의 대비" 가이드라인
-4.5:1 일반 / 3:1 (모바일 확대/축소 가능한 경우) 
+4.5:1 일반 / 3:1 (모바일 확대/축소 가능한 경우)
 
 
 ------
@@ -152,8 +152,8 @@ max scale min scale 확대/축소 몇배이상.
 BEM규칙으로 웹카페 다시만들어보기
 
 
--> 주말에 mediaQuery사용해보기 
->"이론에 바탕하지 않은 현실은 발전이 없다"  
+-> 주말에 mediaQuery사용해보기
+>"이론에 바탕하지 않은 현실은 발전이 없다"
 
 >숙제 미디어쿼리 이용하여 사이트 배치해보기 -> [사이트](https://seulbinim.github.io/)
 1. flex로
@@ -166,7 +166,7 @@ BEM규칙으로 웹카페 다시만들어보기
 ## 메인메뉴와 하위메뉴 토글
 ## jQuery
 >제이쿼리보다 바닐라js 프로토타입으로 사용하는 추세임
-* body끝에 있던 스트립트 파일을 head마지막으로 옮김 
+* body끝에 있던 스트립트 파일을 head마지막으로 옮김
 -> 스크립트가 body 컨텐츠 이전에 생성되면 아직 html이 다 parsing되어있지 않아 오류가 생길 수 도 있다
 -> 제이쿼리 문서준비 event를 사용하여 문제 해결 `$(document).ready(function(){});`
 선택자 방식이 css와 90% 같아서 편하고 익숙하다
@@ -181,4 +181,4 @@ $('.main-menu > li').hover(function() {
     $(this).find('.sub-menu').toggleClass('menu-act');
   });
 ```
-hover보다 focus가 까다로운것을 체크해서. focus로 라인이랑 컬러 유지되는 스크립트 고안 -> 해보셈 
+hover보다 focus가 까다로운것을 체크해서. focus로 라인이랑 컬러 유지되는 스크립트 고안 -> 해보셈

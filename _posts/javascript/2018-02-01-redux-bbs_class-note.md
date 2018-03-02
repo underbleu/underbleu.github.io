@@ -444,6 +444,7 @@ export default connect(
 )(ArticleList);
 
 ```
+
 ```js
 //container/ListPage.js
 import React from 'react';
@@ -526,6 +527,7 @@ class App extends Component {
 
 ## vscode 디버깅
 extension debugger for chrome설치
+
 ---
 
 # ducks 패턴

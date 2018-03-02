@@ -12,7 +12,7 @@
 # Node.js
 [Node.js 교재](https://wpsn.github.io/wpsn-handout/1-1-2-node.html)
 
-* Node.js서버는 성능이 좋다. 동시접속자를 많이 처리 할 수 있다.
+* Node.js서버는 성능이 좋다. 동시접속자를 많이 처리 할 수 있다.  
 * npm에 등록된 라이브러리 개수가 다른 언어에 비해 압도적으로 많다
 
 * Java spring 서버는 기업용으로 쓰기에 과금이 있고, 기능이 너무 많아 스타트업에서는 잘 사용하지 않는 중이다.
