@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 강의노트 react-router
+title: 강의노트 Storybook, React-router
 category: react
 permalink: /react/:title
 

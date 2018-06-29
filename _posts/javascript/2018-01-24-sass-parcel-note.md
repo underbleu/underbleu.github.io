@@ -57,29 +57,49 @@ CSS에서는 import를 많이 쓰면 느려지는 단점이 있지만, Sass에�
 ```
 
 ## Mixins 믹스인
-* 구형브라우저 대응을 위한 prefix를 자동으로 붙여줄 수 있다.
-* 미디어쿼리에 사용가능 -> 화면크기별이 아닌 컴포넌트별 코딩을 할 수 있음
-    * 코드의 응집성이 높아짐. Good!
-```less
-// Prefixer
+CSS를 위한 일종의 function. 호출하면 함수안에 입력해 두었던 코드를 자동으로 삽입한다
+
+### - Examples
+1. vendor prefixes  
+다양한 브라우저 대응을 위한 prefix를 자동으로 붙여줄 수 있다.
+2. MediaQuery  
+기존의 미디어쿼리를 사용하기 위해선 화면크기별로 CSS코딩을 하였지만, 믹스인을 사용하면 컴포넌트별로 CSS코딩을 할 수 있다. 코드의 응집성이 높아짐. Good!
+3. 사용법  
+    * _mixin.scss 믹스인 선언: `@mixin 함수명(인자){...}`
+    * blabla.css 믹스인 호출: `@include 함수명(인자){...}`
+```scss
+// 1. Prefixer
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
       -ms-border-radius: $radius;
           border-radius: $radius;
 }
-// Media-Query
-@mixin desktop {
-    @media (min-width: 900px) {
-        @content;
+
+// 2. Media-Query
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 70em) {
+      @content; 
     }
+  } @else if $point == mobile {
+    @media (min-width: 37.5em) {
+      @content;
+    }
+  }
 }
 
+// 3. CSS에서 믹스인 호출
 .box {
-     @include border-radius(10px);
-     @include desktop {
-         color: red;
-     }
+  @include border-radius(10px);
+  
+  // 컴포넌트별 화면대응 가능
+  @include breakpoint(desktop) {
+    font-size: 16px;
+  }
+  @include breakpoint(mobile) {
+    font-size: 12px;
+  }
 }
 ```
 

@@ -7,6 +7,7 @@ permalink: /javascript/:title/
 tags: [자바스크립트, var, 전역변수]
 comments: true
 ---
+[실행컨텍스트](https://poiemaweb.com/js-execution-context)
 >참고 [MDN var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var)
 
 The variable statement declares a variable, optionally initializing it to a value.
