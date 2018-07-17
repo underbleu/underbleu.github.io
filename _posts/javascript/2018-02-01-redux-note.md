@@ -157,7 +157,7 @@ export default class ArticleList extends Component {
     return (...);
 ```
 
-## Storybook 테스트 더미 추가
+##  테스트 더미 추가
 ```js
 import React from 'react';
 import { storiesOf } from '@storybook/react';
