@@ -7,7 +7,7 @@ permalink:           pretty
 # Setup
 title:               Underbleu
 tagline:             'bong&#39;s devlog'
-description:        'bong&#39;s TIL(Today I Learned) development blog'
+description:        '봉봉이의 개발일지'
 url:                 http://underbleu.github.io
 baseurl:             ''
 paginate:            8
