@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Django-note
-category: Bongstagram, Javascript
+category: Bongstagram
 permalink: /Bongstagram/:title/
 
 tags: [함수형 프로그래밍]
