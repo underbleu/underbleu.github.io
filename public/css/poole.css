@@ -84,6 +84,15 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
+/* 카테고리 route 커스터마이징 */
+.route {
+  font-size: 14px;
+  color: #c0c0c0;
+}
+
+.route a {
+  color: #c0c0c0;
+}
 
 /* Headings */
 
