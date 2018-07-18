@@ -338,6 +338,12 @@ a.sidebar-nav-item:focus {
   margin-top: 0;
 }
 
+.post-title-list {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* Meta data line below post title */
 .post-date {
   display: block;
