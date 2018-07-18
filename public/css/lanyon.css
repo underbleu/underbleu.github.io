@@ -325,6 +325,19 @@ a.sidebar-nav-item:focus {
 .page,
 .post {
   margin-bottom: 2em;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.post::after {
+  content: '...';
+  background-color: red;
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 /* Blog post or page title */
