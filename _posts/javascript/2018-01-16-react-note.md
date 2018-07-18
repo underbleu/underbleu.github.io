@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 강의노트. React, classNames
-category: javascript
-permalink: /javascript/:title/
+category: Javascript
+permalink: /Javascript/:title/
 
 tags: [자바스크립트]
 comments: true

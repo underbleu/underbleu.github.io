@@ -1,4 +1,13 @@
-# # Django: Backend
+---
+layout: post
+title: Django-note
+category: Bongstagram, Javascript
+permalink: /Bongstagram/:title/
+
+tags: [함수형 프로그래밍]
+comments: true
+---
+
 ## Framework vs Library
 > A library is a tool, A frame work is a way of life
 

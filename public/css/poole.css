@@ -88,6 +88,8 @@ a:hover, a:focus {
 .route {
   font-size: 14px;
   color: #c0c0c0;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  margin-bottom: 32px;
 }
 
 .route a {

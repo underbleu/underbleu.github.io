@@ -1,8 +1,8 @@
 ---
 layout: post
 title: javascript 세미콜론 상황에 따른 사용법
-category: javascript
-permalink: /javascript/:title/
+category: Javascript
+permalink: /Javascript/:title/
 
 tags: [자바스크립트, 세미콜론, 자바스크립트 스타일가이드]
 comments: true
