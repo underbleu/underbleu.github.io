@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Redux 디버깅, 번역툴 (Reactotron, Redux Devtools, i18n)
-category: react
-permalink: /react/:title
+title: 
+category: Bongstagram
+permalink: /Bongstagram/:title/
 
-tags: [React]
+tags: [Bongstagram]
 comments: true
 ---
 

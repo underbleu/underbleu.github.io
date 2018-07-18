@@ -1,4 +1,14 @@
-# # 1-29 Django Rest Framework
+---
+layout: post
+title: 
+category: Bongstagram
+permalink: /Bongstagram/:title/
+
+tags: [Bongstagram]
+comments: true
+---
+
+## 1-29 Django Rest Framework
 
 ## REST Framework
 > [공식문서](http://www.django-rest-framework.org/)

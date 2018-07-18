@@ -1,3 +1,13 @@
+---
+layout: post
+title: 
+category: Bongstagram
+permalink: /Bongstagram/:title/
+
+tags: [Bongstagram]
+comments: true
+---
+
 # #1-71 Serializing the Tags
 [Django Taggit Rest Serializer](https://github.com/glemmaPaul/django-taggit-serializer)  
 1. 설치  

@@ -1,3 +1,13 @@
+---
+layout: post
+title: 
+category: Bongstagram
+permalink: /Bongstagram/:title/
+
+tags: [Bongstagram]
+comments: true
+---
+
 # #1-41 Using Variables on the URLS
 
 >`image/3/like` URL로 접근하기

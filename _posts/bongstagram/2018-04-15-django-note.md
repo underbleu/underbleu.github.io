@@ -1,3 +1,12 @@
+---
+layout: post
+title: 
+category: Bongstagram
+permalink: /Bongstagram/:title/
+
+tags: [Bongstagram]
+comments: true
+---
 
 ## Framework vs Library
 > A library is a tool, A frame work is a way of life

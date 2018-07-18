@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 강의노트. Webpack설정, React 이론
-category: react
-permalink: /react/:title
+title: 
+category: Bongstagram
+permalink: /Bongstagram/:title/
 
-tags: [React]
+tags: [Bongstagram]
 comments: true
 ---
 

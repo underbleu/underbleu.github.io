@@ -1,3 +1,13 @@
+---
+layout: post
+title: 
+category: Bongstagram
+permalink: /Bongstagram/:title/
+
+tags: [Bongstagram]
+comments: true
+---
+
 # #1-47 Get people to follow on :explore
 
 >작업순서

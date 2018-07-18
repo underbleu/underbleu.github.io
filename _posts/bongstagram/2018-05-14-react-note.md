@@ -1,3 +1,13 @@
+---
+layout: post
+title: 
+category: Bongstagram
+permalink: /Bongstagram/:title/
+
+tags: [Bongstagram]
+comments: true
+---
+
 # 3-35 Login In with Facebook
 [문서](https://github.com/keppelen/react-facebook-login)
 1. 설치  

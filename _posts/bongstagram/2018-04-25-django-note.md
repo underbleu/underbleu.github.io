@@ -1,3 +1,13 @@
+---
+layout: post
+title: 
+category: Bongstagram
+permalink: /Bongstagram/:title/
+
+tags: [Bongstagram]
+comments: true
+---
+
 # #1-61 Delete Comment
 
 1. 내가 작성한 댓글 삭제

@@ -1,3 +1,13 @@
+---
+layout: post
+title: 
+category: Bongstagram
+permalink: /Bongstagram/:title/
+
+tags: [Bongstagram]
+comments: true
+---
+
 # context를 이용하여 번역하기 (수동식)
 props를 이용하여 내려받던 것을, context를 사용하면 부모에서 바로 불러올 수 있다
 모든 단계에 수동으로 props를 내려 받던 것을, “context” API를 사용하면 컴포넌트 트리 어디서든 context에 직접 접근하여 props를 불러올 수 있다

@@ -1,3 +1,13 @@
+---
+layout: post
+title: 
+category: Bongstagram
+permalink: /Bongstagram/:title/
+
+tags: [Bongstagram]
+comments: true
+---
+
 # #1-39 Getting the User Feed
 
 ## #1. Feed View 생성 (홈화면)

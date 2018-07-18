@@ -1,3 +1,13 @@
+---
+layout: post
+title: 
+category: Bongstagram
+permalink: /Bongstagram/:title/
+
+tags: [Bongstagram]
+comments: true
+---
+
 # #1-33 Viewing all the Comments and Likes
 
 Comment에서 Image모델의 ForeignKey가 아닌 이미지를 출력하기위해 시리얼라이징된 이미지 json객체를 불러오도록해준다

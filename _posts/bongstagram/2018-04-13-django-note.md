@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Django-note
+title: 
 category: Bongstagram
 permalink: /Bongstagram/:title/
 
-tags: [함수형 프로그래밍]
+tags: [Bongstagram]
 comments: true
 ---
 

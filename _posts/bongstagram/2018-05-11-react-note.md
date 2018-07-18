@@ -1,3 +1,13 @@
+---
+layout: post
+title: 
+category: Bongstagram
+permalink: /Bongstagram/:title/
+
+tags: [Bongstagram]
+comments: true
+---
+
 # 3-34 Controlling inputs and submit on LoginForm
 1. 컴포넌트 확장  
 input의 값을 잡아서 API로 전송해야하는 등. 컴포넌트 크기가 커져야 하기 때문에 React.Component를 확장하여 컨테이너를 생성한다

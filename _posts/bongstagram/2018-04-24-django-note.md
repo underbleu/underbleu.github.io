@@ -1,8 +1,18 @@
-클래스 vs 함수
+---
+layout: post
+title: 
+category: Bongstagram
+permalink: /Bongstagram/:title/
+
+tags: [Bongstagram]
+comments: true
+---
+
+### 클래스 vs 함수
 
 클래스 | 함수
 --- | ---
-new연산자와 함께 호출 (필수)
+new연산자와 함께 호출 (필수) | 그냥 호출
 선언 후 호출가능 | 선언전 호출 가능 (호이스팅)
 
 ---

@@ -1,4 +1,14 @@
-# # 1-20 Creating the Image Model
+---
+layout: post
+title: 
+category: Bongstagram
+permalink: /Bongstagram/:title/
+
+tags: [Bongstagram]
+comments: true
+---
+
+## 1-20 Creating the Image Model
 
 >[Model field reference](https://docs.djangoproject.com/es/1.10/ref/models/fields/#field-types)
 
