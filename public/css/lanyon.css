@@ -339,6 +339,8 @@ a.sidebar-nav-item:focus {
 }
 
 .post-title-list {
+  color: #303030;
+  font-size: 1.5rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
