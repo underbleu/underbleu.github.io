@@ -4,12 +4,14 @@ title: Home
 permalink: /javascript/
 ---
 <div class="posts">
-  <p class="route">
-    <a href="{{ site.baseurl }}">HOME</a> / 
-    <a href="{{ site.baseurl }}/javascript/">">Javascript</a>
-  </p>
-  <h1 class="category">Javascript{{ site.categories }}h1>
-  <p class="category-intro">자바스크립트 개발일지</p>
+  <div class="page-introduction">
+    <p class="route">
+      <a href="{{ site.baseurl }}">HOME</a> / 
+      <a href="{{ site.baseurl }}/javascript/">Javascript</a>
+    </p>
+    <h1 class="category">Javascript</h1>
+    <p class="category-intro">자바스크립트 개발일지</p>
+  </div>
   {% for post in site.categories.javascript %}
   <div class="post">
     <h2 class="post-title">
