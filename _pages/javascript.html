@@ -4,14 +4,15 @@ title: Home
 permalink: /javascript/
 ---
 <div class="posts">
+  <h1 class="category">Javascript</h1>
+  <p class="category-intro">자바스크립트 개발일지</p>
   {% for post in site.categories.javascript %}
   <div class="post">
-    <h1 class="post-title">
+    <h2 class="post-title">
       <a href="{{ site.baseurl }}{{ post.url }}">
         {{ post.title }}
       </a>
     </h1>
-
     <span class="post-date">{{ post.date | date_to_string }}</span>
   </div>
   {% endfor %}
