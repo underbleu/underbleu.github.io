@@ -142,7 +142,7 @@ strong {
 
 ul, ol, dl {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   padding-left: 20px;
 }
 
@@ -217,6 +217,7 @@ pre code {
 /* Pygments via Jekyll */
 
 .highlight {
+  margin-top: 1rem;
   margin-bottom: 1rem;
   border-radius: 4px;
 }
