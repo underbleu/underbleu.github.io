@@ -16,7 +16,8 @@
   </div>
 
   <nav class="sidebar-nav">
-    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a> {% comment %} The code below dynamically generates a sidebar nav of pages with `layout: page` in the front-matter. See readme for usage.
+    <!--<a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a> -->
+    {% comment %} The code below dynamically generates a sidebar nav of pages with `layout: page` in the front-matter. See readme for usage.
     {% endcomment %} {% assign pages_list = site.pages | sort:"url" %} {% for node in pages_list %} {% if node.title != null %} {% if node.layout == "page" %}
     <!-- <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a> {% endif %} {% endif %} {% endfor %} -->
 
@@ -29,7 +30,7 @@
     <a href="{{site.baseurl}}/HTML,CSS/" class="sidebar-nav-item">HTML, CSS</a>
     <a href="{{site.baseurl}}/NodeJs/" class="sidebar-nav-item">NodeJs</a>
     <a href="{{site.baseurl}}/React/" class="sidebar-nav-item">React</a>
-    <a href="{{site.baseurl}}/Computer-science/" class="sidebar-nav-item">Computer-science</a>
+    <a href="{{site.baseurl}}/Computer-science/" class="sidebar-nav-item">CS</a>
     <a href="{{site.baseurl}}/ect/" class="sidebar-nav-item">ect</a>
     <a class="sidebar-nav-item" href="https://github.com/underbleu">GitHub project</a>
   </nav>

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 웹카페 - 슬로건, 푸터영역
-category: HTML,CSS
-permalink: /HTML,CSS/:title/
+category: HTML-CSS
+permalink: /HTML-CSS/:title/
 
 tags: [html5, markup, 마크업]
 comments: true
