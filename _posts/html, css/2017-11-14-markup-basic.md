@@ -1,8 +1,8 @@
 ---
 layout: post
 title: HTML5 기초, 아웃라인 알고리즘
-category: html
-permalink: /html/:title/
+category: HTML,CSS
+permalink: /HTML,CSS/:title/
 
 tags: [html5, markup, 마크업]
 comments: true

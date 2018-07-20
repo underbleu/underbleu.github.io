@@ -1,0 +1,23 @@
+---
+layout: default
+title: Home
+permalink: /ect/
+---
+<div class="posts">
+  <div class="page-introduction">
+    <p class="route">
+      <a href="{{ site.baseurl }}/">Home</a> / 
+      <a href="{{ site.baseurl }}/ect/">ect</a>
+    </p>
+  </div>
+  {% for post in site.categories.ect %}
+  <div class="post">
+    <h2 class="post-title">
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+    <span class="post-date">{{ post.date | date_to_string }} | ect</span>
+  </div>
+  {% endfor %}
+</div>

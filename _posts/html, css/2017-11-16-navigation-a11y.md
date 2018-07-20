@@ -1,8 +1,8 @@
 ---
 layout: post
-title: HTML/CSS 웹카페예제 (네비게이션영역, a11y)
-category: html
-permalink: /html/:title/
+title: 웹카페 - 네비게이션영역, a11y
+category: HTML,CSS
+permalink: /HTML,CSS/:title/
 
 tags: [html5, markup, 마크업]
 comments: true
@@ -10,8 +10,9 @@ comments: true
 # 11/16
 
 >마크업 순서
-.header > .member + .navigation ㅊ
+.header > .member + .navigation
 .navigation > .main-menu > .sub-menu
+
 ## 1. 멤버링크 `.member`
 ### 1.1 마지막 요소의 여백 격차 줄이는 방법 4가지
 1. **last-child의 padding-right:0 으로 설정**  
@@ -42,6 +43,7 @@ a:hover, a:focus {
 `a:link`와 `a:hover`구체성 점수(11점)가 같아 뒤에 위치한 코드가 우선순위를 가짐. hover와 focus가 뒤에 위치해야 폰트컬러가 바뀔 수 있다.
 
 ### 1.3 접근성을 고려한 a:focus의 outline설계 
+
 ```css
 .member li {
   padding: 10px 0;
@@ -51,6 +53,7 @@ a:hover, a:focus {
 }
 
 ```
+
 일반적으로 링크요소엔 접근성을 위해 padding을 줘서 클릭할 수 있는 영역을 넓혀준다.  
 >**Q. 부모와 자식의 padding여백을 상이하게 준 이유?**   
 키보드로 요소에 접근시 생기는 outline은 박스의 보더 밖에 생기는데, 멤버링크는 화면의 최상단에 위치해 있어 focus받았을 때 생기는 outline이 잘려보여 2px정도 여유를 준것임

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: javascript 세미콜론 상황에 따른 사용법
+title: Javascript 세미콜론 상황에 따른 사용법
 category: Javascript
 permalink: /Javascript/:title/
 

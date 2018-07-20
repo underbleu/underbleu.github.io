@@ -1,8 +1,8 @@
 ---
 layout: post
-title: HTML/CSS 웹카페예제 (신규이벤트, 인기사이트, IR)
-category: html
-permalink: /html/:title/
+title: 웹카페 - 신규이벤트, 인기사이트, IR
+category: HTML,CSS
+permalink: /HTML,CSS/:title/
 
 tags: [html5, markup, 마크업]
 comments: true

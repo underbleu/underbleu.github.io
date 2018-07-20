@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 컴퓨터공학_운영체제, 서버사이드
-category: computer-science
-permalink: /computer-science/:title/
+category: Computer-science
+permalink: /Computer-science/:title/
 
 tags: [자바스크립트, 브라우저 작동원리]
 comments: true

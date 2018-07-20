@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 컴퓨터공학_웹 HTTP, AWS
-category: computer-science
-permalink: /computer-science/:title/
+category: Computer-science
+permalink: /Computer-science/:title/
 
 tags: [HTTP, AWS]
 comments: true

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: HTML/CSS 웹카페예제 (비주얼, 로그인영역)
-category: html
-permalink: /html/:title/
+title: 웹카페 - Visual, 로그인 영역
+category: HTML,CSS
+permalink: /HTML,CSS/:title/
 
 tags: [html5, markup, 마크업]
 comments: true
