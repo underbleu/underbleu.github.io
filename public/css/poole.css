@@ -85,14 +85,23 @@ a:hover, a:focus {
 }
 
 /* 카테고리 route 커스터마이징 */
-.route {
+.page-introduction {
   font-size: 14px;
   color: #c0c0c0;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   margin-bottom: 32px;
 }
 
-.route a {
+.category-route {
+  display: flex;
+  justify-content: space-between;
+}
+
+.category-route a {
+  border-right: 1px solid #c0c0c0;
+}
+
+.category-route a, .route a {
   color: #c0c0c0;
 }
 

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 강의노트. React-router, Redux 기초
-category: react
-permalink: /react/:title
+title: React-router, Redux 기초
+category: React
+permalink: /React/:title
 
 tags: [React]
 comments: true

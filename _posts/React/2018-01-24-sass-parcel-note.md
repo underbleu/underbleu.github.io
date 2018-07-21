@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Sass, Pacel
-category: react
-permalink: /react/:title
+category: React
+permalink: /React/:title
 
 tags: [React]
 comments: true
