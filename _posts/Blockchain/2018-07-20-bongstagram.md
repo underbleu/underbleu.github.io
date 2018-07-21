@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bongstagram - Ethereum ERC721-based photo licensing DApp
+title: Bongstagram DApp 개발
 category: Blockchain
 permalink: /Blockchain/:title/
 
