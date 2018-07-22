@@ -33,8 +33,10 @@ set[Symbol.iterator]() == set // false
 ```
 
 ## A: 선생님 답변
+
 * 일단, well-formed의 장점은 여기저기서 조합하기 좋다
 * Array, String은 well-formed가 맞음. 위의 테스트가 잘못되었음
+
 ```js
 // 올바른 Test Case
 var arr = [1,2,3];
