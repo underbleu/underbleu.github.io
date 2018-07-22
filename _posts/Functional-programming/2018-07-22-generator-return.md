@@ -71,6 +71,7 @@ reduce6((a, b) => Promise.resolve(a + b), objIterG).then(console.log)
 
 ### Generator.prototype.return()
 제너레이터의 `.return()` 메소드는 제공된 값을 반환하고 Generator를 종료시킨다
+
 ```js
 var test = valuesIter([1,2,3])
 test.next(); // {value: 1, done: false}
@@ -155,8 +156,8 @@ reduce((a, b) => Promise.resolve(a + b), {a: 1, b: 2, c: 3}); // 3
 * 비동기가 일어나면,  
 재귀를 돌기위해 for문을 빠져나가면서 `.return()`이 먼저 실행되어, `iter.next()`가 `{ done: true }`가 되도록 되어있어 더이상 for...of로 순회가 불가능하게된다
 
-Q: 왜 이런현상이 있는 걸까요 ?  
-A: 에러가 발생했을때 이터레이터를 종료시켜서 제너레이터 객체 자체를 언능 날려버릴 수 있게 하기 위한 목적으로 보여집니다
+>Q: 왜 이런현상이 생길까요 ?  
+>A: 에러가 발생했을때 이터레이터를 종료시켜서 제너레이터 객체 자체를 언능 날려버릴 수 있게 하기 위한 목적으로 보여집니다
 
 ---
 
@@ -165,6 +166,7 @@ A: 에러가 발생했을때 이터레이터를 종료시켜서 제너레이터 
 
 1. 제너레이터로 만든 결과를 `.return()`이 없는 객체로 감싸서 리턴 하거나  
 2. 파격적으로 `.return`에 `null`을 대입해버리는 방법이 있다
+
 ```js
 const iter = valuesIter({ a: 1, b: 2 });
 
