@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 
+title: Django Note.02
 category: Bongstagram
 permalink: /Bongstagram/:title/
 

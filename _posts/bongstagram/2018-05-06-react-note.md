@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 
+title: React Note.05
 category: Bongstagram
 permalink: /Bongstagram/:title/
 

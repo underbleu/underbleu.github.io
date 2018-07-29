@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Bongstagram DApp 아이디어
-category: Blockchain
-permalink: /Blockchain/:title/
+category: Bongstagram
+permalink: /Bongstagram/:title/
 
-tags: [Blockchain]
+tags: [Bongstagram]
 comments: true
 ---
 
