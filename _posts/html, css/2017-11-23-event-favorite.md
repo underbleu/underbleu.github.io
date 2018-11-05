@@ -24,9 +24,14 @@ Text-indent 속성은 사용하기 간편하지만 단점이 있습니다. 만�
 Title 속성으로 스크린리더 사용자에게 추가 설명을 제공하는 것의 문제는 스크린리더 대부분이 폼 요소를 제외한 링크 등의 컨트롤에 적용된 title 속성을 무시한다는 것입니다. 아울러 title 속성은 국내 웹 접근성 지침과는 달리 WEBAIM은 폼 요소 등으로 제한하여 사용할 것을 권고하고 있습니다.
 
 ## Sprite Image
-한 이미지에 여러 아이콘을 넣고 위치만 바꿔 사용하는 것
-여러 아이콘 이미지를 각각 출력하여 사용하는 것 보다 성능이 훨씬 좋아짐
-너무 큰 이미지는 오히려 성능안좋아지니 적절한 크기 제한을 둬야함.
+https://css-tricks.com/css-sprites/
+https://www.maxcdn.com/one/visual-glossary/css-sprites/
+
+CSS Sprite Image is a performance optimization technique that combines multiple images into a single image called a sprite sheet or tile set. Sprites reduce network congestion by reducing the number of downloads needed to render a web page.
+​
+- 하나의 이미지 판에 여러 이미지를 넣고 위치만 바꿔 사용하는 기법 (아이콘 같은 작은 이미지)
+- 아이콘 이미지를 각각 출력하여 사용하는 것보다, network에서 1개 이미지만 받아와 위치를 조정하여 사용하기 때문에 성능이 좋아짐
+- 너무 큰 이미지를 sprite image에 넣으면 오히려 성능 안좋아질 수 있으니 적절한 크기 제한을 둬야함
 
 ## 신규 이벤트
 
