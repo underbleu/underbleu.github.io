@@ -35,31 +35,31 @@ comments: true
 ![airbnb_main](../../img/airbnb_why2.jpeg)
 ![airbnb_main](../../img/airbnb_why3.jpeg)
 
-#### 문제상황 직면
+### # 문제상황 직면
 
 공통된 약속없이 개발되던 에어비앤비 서비스는 디바이스/플랫폼별(android, ios, web) 버튼의 크기와 border-radius가 제각각이었고, **심지어 브랜드컬러까지 팀마다 다르게 사용하고 있었다.**
 
 팀마다 다르게 사용하던 브랜드컬러.jpg
 ![airbnb_main](../../img/airbnb_why4.jpeg)
 
-#### 디자인시스템 중요성
+#### # 디자인시스템 중요성
 디자인시스템은 IKEA의 가구조립 안내가이드와 같다고 생각한다. 주어진 시스템에 아이디어를 붙여 나만의 인테리어를 만들 수 있다는 점에서 디자인 시스템과의 연결점이 있다. 디자인시스템을 사용하면 디자인하는 시간을 줄여, ux를 고민할 시간을 더 벌어준다고 생각한다.
 
 * 잘짜여진 컴포넌트 = IKEA의 가구를 샀을때처럼 서비스의 일관된 퀄리티와 느낌을 유지
 * 디자인시스템 = 가구조립 안내가이드를 따라 손쉽게 가구를 만들 수 있음
 
->*Gain time to focus on the innovative ideas*
+>*Gain time to focus on the innovative ideas*  
 >*혁신적인 아이디어에 집중할 시간을 벌게됨*
 
 ![airbnb_main](../../img/airbnb_why1.jpeg)
 
 
 #### 디자인시스템 도입
-**"규칙을 모르고 디자인시스템을 사용하는 것  = 하얀종이에 스티커를 붙이는 것과 같음"**
+**"규칙을 모르고 디자인시스템을 사용하는 것  = 하얀종이에 스티커를 붙이는 것과 같음"**  
 디자인 개발자 모두 디자인시스템 규칙을 잘 알고 사용해야한다. 개발자도 직관적으로 이해할 수 있도록 시스템은 정확하고 객관적이어야한다. 시스템의 이해를 돕기위해 가이드라인에 예시들을 포함해주면 좋다.
 
-ex1. main, primary 버튼을 사용해야하는 rule을 정해줘야함
-ex2. 컴포넌트 사용 **Do/Dont 사례**를 만들어주면 좋음
+- ex1. main, primary 버튼을 사용해야하는 rule을 정해줘야함  
+- ex2. 컴포넌트 사용 **Do/Dont 사례**를 만들어주면 좋음
 
 ![airbnb_main](../../img/airbnb_designSystemfolder.jpeg)
 
@@ -68,7 +68,7 @@ ex2. 컴포넌트 사용 **Do/Dont 사례**를 만들어주면 좋음
 ![airbnb_main](../../img/airbnb_designSystemCore1.jpeg)
 ![airbnb_main](../../img/airbnb_designSystemCore2.jpeg)
 
-**# Team library**
+**# Team library**  
 프로덕트팀별 다른 디자인이 만들어지더라도 **패밀리 느낌**이 나도록하는 강력한 가이드라인이 필요
 
 ![airbnb_main](../../img/airbnb_designSystemTeam1.jpeg)
@@ -122,19 +122,20 @@ ex2. 컴포넌트 사용 **Do/Dont 사례**를 만들어주면 좋음
 - [Polaris Design System](https://polaris.shopify.com/) (Shopify)
   - 전자상거래 3위를 달리고 있는곳. 아마존 전자상거래와 비슷
   - 독특한점. 컴포넌트들을 액션으로 묶어 가이딩함
-
+  
+  
 #### 독자적인 Airbnb만의 디자인시스템
 에어비앤비는 안드로이드라고 구글 가이드라인을, IOS라고 애플 가이드라인을 따르지 않는다. 에어비앤비만의 독자적인 디자인 시스템을 적용하여 기기변경시에도 서비스 사용에 혼동을 주지 않고, 일관된 경험을 주기 위해 비슷한 톤, 배치의 디자인을 유지한다
 
-**# Before**
+**# Before**  
 디자인시스템 도입전, 디바이스별 플랫폼별 제 각각이던 디자인. 일관된 유저경험을 주지 못함
 ![airbnb_main](../../img/airbnb_designSystemBefore.jpeg)
 
-**# After**
+**# After**  
 디자인시스템 도입후, 여러사람이 디자인하더라도 한사람이 디자인한 것 처럼 만들어낸 듯함. 일관된 유저경험 제공
 ![airbnb_main](../../img/airbnb_designSystemAfter.jpeg)
 
-
+---
 
 ## 마치며...
 마지막으로 이번 세미나를 들으며 디자인시스템의 의미를 새길 수 있었던 말
