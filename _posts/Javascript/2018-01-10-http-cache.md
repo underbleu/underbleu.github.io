@@ -31,8 +31,8 @@ comments: true
     * 사이트문제시 크롬 Network 헤더에서 etag 버전 확인해보면됨
 
 ### If-None-Math헤더에서 etag를 확인하고, HTTP상태코드 전송
-![etag1]({{site.baseurl}}/img/etag1.png)
-![etag2]({{site.baseurl}}/img/etag2.png)
+![etag1]({{site.baseurl}}/img/etag1.jpg)
+![etag2]({{site.baseurl}}/img/etag2.jpg)
 
 ## ETag 생성방법
 `etag:W/"518-IUUcU4dNqz88Ytwacyqq9mV+V2g"`
