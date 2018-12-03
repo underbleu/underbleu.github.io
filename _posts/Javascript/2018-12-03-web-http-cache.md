@@ -1,12 +1,15 @@
 ---
 layout: post
-title: HTTP 캐싱
+title: HTTP 캐시 (웹캐시)
 category: Javascript
 permalink: /Javascript/:title/
 
 tags: [자바스크립트]
 comments: true
 ---
+
+![http-cache]({{site.baseurl}}/img/http-cache.png)
+대용량 서비스에서 효율적인 리소스관리를 위해 주로 Cache를 사용하는데요. 저는 이번에 다양한 캐싱방법중 프론트단에서 가장 쉽게 사용할 수 있는 HTTP 캐시에대해 알아보았습니다 :)
 
 ## Cache?
 > (무기 등의) 은닉처. 은닉하다
