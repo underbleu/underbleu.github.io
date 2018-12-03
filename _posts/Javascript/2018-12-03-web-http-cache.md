@@ -25,7 +25,7 @@ comments: true
 
 ## 캐시의 문제
 
->**사이트의 실제자원과 캐시자원이 달라지는 상황**
+>**사이트의 실제자원과 캐시자원이 달라지는 상황**  
 어떤 페이지를 방문했을때 index.html을 캐시에 저장해두고 재사용을 하는데, 홈페이지 업데이트를 하면 어떻게 해야될까?
 
 1. **Expiration(만료): Cache-Control**
@@ -35,39 +35,32 @@ comments: true
     - 서버에 식별자(ETag)와 함께 요청을 보내서 캐시를 계속 사용할 수 있는지 확인
 
 ## 캐시관련 헤더
-- Cache-Control
+- **Cache-Control**  
 (요청, 응답) 캐시와 관련된 다양한 기능을 하는 지시자를 포함. no-cache, max-age가 많이 사용됨. no-cache, max-age=0 지시자는 캐시를 사용하지 않도록 하거나, 캐시를 아직도 쓸 수 있는지 검증하기 위해 사용됨 (각각의 자세한 의미)
-- ETag
+- **ETag**  
 (응답) 캐시의 검증을 위해 사용되는 자원의 식별자. 주로 자원의 해시값이 사용되나, 마지막으로 수정된 시각, 혹은 버전 넘버를 사용하기도 함
-- Expires
+- **Expires**  
 (응답) 캐시를 만료시킬 시각을 서버에서 명시적으로 지정
-- Last-Modified
+- **Last-Modified**  
 (응답) 원래 자료가 마지막으로 수정된 시각
-- If-None-Match
+- **If-None-Match**  
 (요청) 검증을 위해 사용됨. 이전에 저장해두었던 자원의 ETag 값을 If-None-Match 헤더의 값으로 요청에 포함시켜서 보내면, 서버는 해당 경로에 있는 자원의 ETag와 비교해보고 자원의 전송 여부를 결정
-- If-Modified-Since
+- **If-Modified-Since**  
 (요청) 검증을 위해 사용됨. 이전에 저장해두었던 자원의 Last-Modified 값을 If-Modified-Since 헤더의 값으로 요청에 포함시켜서 보내면, 서버는 해당 경로에 있는 자원의 Last-Modified와 비교해보고 자원의 전송 여부를 결정
 
+## ETag로 효율적인 리소스 관리를 하자!
 
-* ETag를  [If-None-Match 헤더](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-None-Match)의 값에 보내서 캐시를 계속 사용할 수 있는지 확인
--> 자원내용버전 같은경우 (304. Not Modified) 응답
-* `ETag`는 자원의 **내용**식별자 `fc.co.kr/index.html` 자원의 **위치**식별자
-* 사이트문제시 크롬 Network 헤더에서 etag 버전 확인해보면됨
-
-## ETag로 효율적인 리소스 관리를 하자
-
-Q: 웹 개발자로서 어떻게 효율적으로 데이터를 관리할 수 있을까?
+Q: 웹 개발자로서 어떻게 효율적으로 데이터를 관리할 수 있을까?  
 A: 브라우저가 우리를 대신하여 모든 작업을 수행한다. 한 가지 남은 일은 필요한 **ETag 토큰을 서버가 제공하는지 확인하는 것뿐 !**
 
-### ETag로 캐시에 대한 유효성 검사 과정
-
-![etag1]({{site.baseurl}}/img/etag1.jpg)
 1. 리소스 최초 요청시, 서버는 일반적으로 파일 콘텐츠의 해시나 기타 일부 지문인 임의 토큰을 생성(ETag)하여 응답에 보낸다
+![etag1]({{site.baseurl}}/img/etag1.jpg)
+
+2. 이후 브라우저는 서버에 리소스 요청시, ETag이 이전에 캐싱해둔 리소스에 지정되었는지 자동으로 탐지하고, ETag를 요청의 [If-None-Match 헤더](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-None-Match)의 값에 보내서 저장되어있는 캐시를 계속 사용할 수 있을지 서버에 유효성검사 요청한다
+3. 서버는 현재 리소스와 비교를 하고, 토큰이 변경되지 않은 경우,  `304 Not Modified` 응답을 내보내며 리소스를 다시 다운로드할 필요가 없다고 말해준다
 
 ![etag2]({{site.baseurl}}/img/etag2.jpg)
 
-2. 이후 브라우저는 서버에 리소스 요청시, ETag(유효성 검사 토큰)이 이전에 캐싱해둔 리소스에 지정되었는지 자동으로 탐지하고, ETag를 요청의 [If-None-Match 헤더](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-None-Match)의 값에 보내서 저장되어있는 캐시를 계속 사용할 수 있는지 요청한다
-3. 서버는 현재 리소스와 비교를 하고, 토큰이 변경되지 않은 경우,  `304 Not Modified` 응답을 내보내며 리소스를 다시 다운로드할 필요가 없다고 말해준다
 4. 즉, 리소스가 변경되지 않은 경우 데이터가 전송되지 않고, 효율적인 리소스 업데이트가 가능해진다
 
 ## ETag 생성원리
